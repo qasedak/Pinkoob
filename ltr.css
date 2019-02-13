@@ -1,0 +1,17 @@
+/* LTR Support since v1.5.4 RC */
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+#topmenu-icons-wrapper {
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+.navbar-header {
+    padding-right: 5px;
+    padding-left: 0;
+}
+#topmenu .dropdown-menu .dropdown-menu {
+    left: 100%;
+    right: 0;
+}

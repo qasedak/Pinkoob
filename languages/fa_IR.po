@@ -1,0 +1,2373 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinkoob\n"
+"POT-Creation-Date: 2018-11-07 19:39+0330\n"
+"PO-Revision-Date: 2018-11-07 19:39+0330\n"
+"Last-Translator: Mohammad Anbarestany <m_anbarestany@hotmail.com>\n"
+"Language-Team: \n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:6
+msgid "404 Error: Page Not Found"
+msgstr "خطای 404 : صفحه پیدا نشد."
+
+#: 404.php:10
+msgid "Oops... the page you requested could not be found."
+msgstr "متاسفانه صفحه مورد نظر شما یافت نشد."
+
+#: 404.php:11
+msgid "Perhaps searching will help."
+msgstr "احتمالا جستجو به شما کمک خواهد کرد."
+
+#: author.php:58
+msgid "Most Followers"
+msgstr "بیشترین دنبال کننده"
+
+#: author.php:62
+msgid "Most Pins"
+msgstr "بیشترین تصاویرارسال شده"
+
+#: author.php:104 search.php:10
+msgid "Boards"
+msgstr "آلبوم ها"
+
+#: author.php:105 author.php:143 search.php:139 search.php:146
+#: sidebar-right.php:80 sidebar-right.php:90
+msgid "pins"
+msgstr "تصویر"
+
+#: author.php:105 page_top_users.php:44 page_top_users.php:142 search.php:6
+#: search.php:241 single-pin.php:263 taxonomy-board.php:46
+msgid "Pins"
+msgstr "تصویر"
+
+#: author.php:106 author.php:155 index-masonry.php:69 index-masonry.php:78
+msgid "likes"
+msgstr "لایک"
+
+#: author.php:106 functions.php:1626 single-pin.php:521
+msgid "Likes"
+msgstr "لایک"
+
+#: author.php:107 author.php:188 author.php:189 author.php:269 author.php:279
+#: author.php:294
+msgid "followers"
+msgstr "دنبال کننده"
+
+#: author.php:107 author.php:208 page_top_users.php:44 page_top_users.php:142
+#: search.php:241 single-pin.php:263
+msgid "Followers"
+msgstr "دنبال کننده"
+
+#: author.php:108 author.php:188 author.php:191 author.php:271 author.php:281
+#: author.php:296
+msgid "following"
+msgstr "دنبال شونده"
+
+#: author.php:108 functions.php:3899
+msgid "Following"
+msgstr "دنبال شونده"
+
+#: author.php:112 author.php:254 functions.php:1626 page_top_users.php:90
+#: page_top_users.php:188 search.php:287 single-pin.php:254
+msgid "Follow"
+msgstr "دنبال کردن"
+
+#: author.php:112 author.php:254 functions.php:1626 page_top_users.php:90
+#: page_top_users.php:188 search.php:287 single-pin.php:254
+msgid "Unfollow"
+msgstr "دنبال نکردن"
+
+#: author.php:121 single-pin.php:105 taxonomy-board.php:61
+msgid "Share on Facebook"
+msgstr "اشتراک در فیسبوک"
+
+#: author.php:122 single-pin.php:106 taxonomy-board.php:62
+msgid "Share on Twitter"
+msgstr "اشتراک در توییتر"
+
+#: author.php:123 single-pin.php:107 taxonomy-board.php:63
+msgid "Share on Reddit"
+msgstr "اشتراک در رددیت"
+
+#: author.php:124 single-pin.php:108 taxonomy-board.php:64
+msgid "Share on Google+"
+msgstr "اشتراک در گوگل پلاس"
+
+#: author.php:125 single-pin.php:109 taxonomy-board.php:65
+msgid "Share on Pinterest"
+msgstr "اشتراک در پینترست"
+
+#: author.php:129
+msgid "Edit Profile"
+msgstr "ویرایش پروفایل"
+
+#: author.php:133
+msgid "Edit User"
+msgstr "ویرایش کاربر"
+
+#: author.php:180 author.php:442 index-masonry.php:61 page_source.php:105
+#: search.php:203 search.php:358
+msgid "Nothing yet."
+msgstr "هنوز موردی ارسال نشده است ."
+
+#: author.php:208 page_top_users.php:44 page_top_users.php:142 search.php:241
+#: single-pin.php:263
+msgid "Pin"
+msgstr "تصویر"
+
+#: author.php:208 page_top_users.php:44 page_top_users.php:142 search.php:241
+#: single-pin.php:263
+msgid "Follower"
+msgstr "دنبال کننده"
+
+#: author.php:257 page_top_users.php:93 page_top_users.php:191 search.php:290
+#: single-pin.php:257
+msgid "Myself!"
+msgstr "خودم"
+
+#: author.php:270 author.php:272 author.php:423 category-blog.php:80
+#: index-masonry.php:95 index-masonry.php:108 page_cp_notifications.php:102
+#: page_source.php:120 search.php:183 search.php:301 single-masonry.php:154
+msgid "&laquo; Previous"
+msgstr "&laquo;قبلی"
+
+#: author.php:280 author.php:282 author.php:429 category-blog.php:81
+#: index-masonry.php:101 index-masonry.php:109 page_cp_notifications.php:108
+#: page_source.php:126 search.php:189 search.php:307 single-masonry.php:160
+msgid "Next &raquo;"
+msgstr "بعدی &laquo;"
+
+#: author.php:295
+msgid "No one following yet."
+msgstr "هنوز کسی شما را دنبال نمیکند."
+
+#: author.php:297
+msgid "Not following anyone yet."
+msgstr "شما هنوز کسی را دنبال نکرده اید."
+
+#: author.php:379 author.php:386 page_cp_notifications.php:70
+#: page_cp_notifications.php:74 page_cp_notifications.php:82 search.php:139
+#: sidebar-right.php:80
+msgid "pin"
+msgstr "تصویر"
+
+#: author.php:410 functions.php:1626 search.php:170 sidebar-right.php:117
+#: single-pin.php:284 single-pin.php:383 taxonomy-board.php:50
+msgid "Follow Board"
+msgstr "دنبال کردن آلبوم"
+
+#: author.php:410 functions.php:1626 search.php:170 sidebar-right.php:117
+#: single-pin.php:284 single-pin.php:383 taxonomy-board.php:50
+msgid "Unfollow Board"
+msgstr "دنبال نکردن آلبوم"
+
+#: author.php:413 page_cp_boards.php:23 search.php:173 sidebar-right.php:120
+#: single-pin.php:287 single-pin.php:386 taxonomy-board.php:70
+msgid "Edit Board"
+msgstr "ویرایش آلبوم"
+
+#: category-blog.php:16 single-blog.php:16
+msgid "0 Comments"
+msgstr "0 نظر"
+
+#: category-blog.php:16 single-blog.php:16
+msgid "1 Comment"
+msgstr "1 نظر"
+
+#: category-blog.php:16 single-blog.php:16
+msgid "% Comments"
+msgstr "%  نظر"
+
+#: category-blog.php:16 functions.php:655 functions.php:2254
+#: index-masonry-inc.php:188 single-blog.php:16 single-pin.php:137
+msgid "Edit"
+msgstr "ویرایش"
+
+#: category-blog.php:32 page.php:19 page_full_width.php:21 page_no_sidebar.php:22
+#: single-blog.php:32 single-pin.php:240
+msgid "Pages:"
+msgstr "صفحه:"
+
+#: category-blog.php:42 functions.php:1009 header-color.php:23 header.php:23
+#: page_cp_boards.php:37 page_cp_boards.php:85 page_gifts.php:32
+#: page_popular.php:16 single-blog.php:42 taxonomy-board.php:45
+msgid "Category"
+msgstr "دسته بندی"
+
+#: color.php:13
+msgid "Filter"
+msgstr "فیلتر"
+
+#: comments.php:15
+msgid "&laquo; Older Comments"
+msgstr "&laquo; نظرات پیشین"
+
+#: comments.php:16
+msgid "Newer Comments &raquo;"
+msgstr "نظرات جدید &raquo;"
+
+#: comments.php:30 index-masonry-inc.php:225
+msgid "X Cancel reply"
+msgstr "X لغو پاسخ"
+
+#: comments.php:34 comments.php:43 index-masonry-inc.php:229
+msgid "Post Comment"
+msgstr "ارسال نظر"
+
+#: comments.php:35 index-masonry-inc.php:230
+msgid "Add a comment..."
+msgstr "افزودن نظر"
+
+#: comments.php:42
+msgid "Login to comment..."
+msgstr "برای ارسال نظر وارد سایت شوید..."
+
+#: footer.php:9 functions.php:1626
+msgid "Welcome"
+msgstr "خوش أمدید"
+
+#: footer.php:17 functions.php:1626 page_cp_login.php:68
+#: page_cp_login_lpw.php:219
+msgid "Username or Email"
+msgstr "نام کاربری یا ایمیل"
+
+#: footer.php:21 functions.php:1626 page_cp_login.php:58 page_cp_login.php:73
+#: page_cp_register.php:310 page_cp_settings.php:359
+msgid "Password"
+msgstr "رمز عبور"
+
+#: footer.php:21 functions.php:1626 page_cp_login.php:73
+msgid "Forgot?"
+msgstr "فراموش کرده اید ؟"
+
+#: footer.php:25 functions.php:1626 functions.php:3881 header-color.php:130
+#: header-color.php:131 header.php:130 header.php:131 page_cp_login.php:63
+#: page_cp_login.php:91
+msgid "Login"
+msgstr "ورود"
+
+#: footer.php:27 functions.php:1626
+msgid "or"
+msgstr "یا"
+
+#: footer.php:27 functions.php:1626 functions.php:3890 header-color.php:129
+#: header-color.php:181 header.php:129 header.php:181 page_cp_register.php:295
+#: page_cp_register.php:351
+msgid "Sign Up"
+msgstr "عضویت"
+
+#: footer.php:37
+msgid "Top"
+msgstr "رفتن به بالا"
+
+#: footer.php:43
+msgid "You need to enable Javascript."
+msgstr "شما به فعالسازی جاوا اسکریپت نیاز دارید."
+
+#: functions.php:57
+msgid "Color schemes"
+msgstr "رنگبندی"
+
+#: functions.php:58 functions.php:59 single-pin.php:700
+msgid "Color scheme"
+msgstr "رنگبندی"
+
+#: functions.php:60
+msgid "all colors"
+msgstr "تمام زنگها"
+
+#: functions.php:61
+msgid "add new color"
+msgstr "افزودن رنگ جدید"
+
+#: functions.php:123
+msgid "Submit Colors"
+msgstr "ثبت رنگبندی"
+
+#: functions.php:136
+msgid "Successfully submitted."
+msgstr "با موفقیت ثبت شد."
+
+#: functions.php:138
+msgid "Sorry something wrong happend!"
+msgstr "خطایی رخ داد!"
+
+#: functions.php:520
+#, php-format
+msgid "%s min ago"
+msgstr "%s دقیقه قبل"
+
+#: functions.php:524
+#, php-format
+msgid "%s mins ago"
+msgstr "%s دقیقه قبل"
+
+#: functions.php:540
+#, php-format
+msgid "%s hour ago"
+msgstr "%s ساعت قبل"
+
+#: functions.php:544
+#, php-format
+msgid "%s hours ago"
+msgstr "%s ساعت قبل"
+
+#: functions.php:560
+#, php-format
+msgid "%s day ago"
+msgstr "%s روز قبل"
+
+#: functions.php:564
+#, php-format
+msgid "%s days ago"
+msgstr "%s روز قبل"
+
+#: functions.php:648 functions.php:2253
+msgid "Reply"
+msgstr "پاسخ"
+
+#: functions.php:689
+msgid "Your comment is awaiting moderation."
+msgstr "نظر شما در انتظار بررسی ست ."
+
+#: functions.php:905
+msgid "Description"
+msgstr "توضیحات"
+
+#: functions.php:940
+msgid "Add a new board first..."
+msgstr "ابتدا آلبوم جدیدی اضافه کنید ..."
+
+#: functions.php:1006 header-color.php:20 header.php:20
+msgid "Untitled"
+msgstr "بدون عنوان"
+
+#: functions.php:1009 functions.php:1746 header-color.php:23 header.php:23
+#: single-pin.php:289
+msgid "Pinned onto"
+msgstr "سنجاق زدن به"
+
+#: functions.php:1009 header-color.php:23 header.php:23
+msgid "Board in"
+msgstr "آلبوم در"
+
+#: functions.php:1107
+msgid "Board by"
+msgstr "آلبوم توسط"
+
+#: functions.php:1113 page_source.php:17
+msgid "Pins from"
+msgstr "سنجاق شده از"
+
+#: functions.php:1129
+msgid "Tag:"
+msgstr "برچسب :"
+
+#: functions.php:1134
+msgid "Category:"
+msgstr "دسته بندی :"
+
+#: functions.php:1139 header-color.php:199 header.php:199
+msgid "Search results for"
+msgstr "جستجوی نتایج برای"
+
+#: functions.php:1253
+msgid "Email not verified. Please check your email for verification link."
+msgstr ""
+"ایمیل تایید نشده است ، برای تایید ایمیل روی لینک فعالسازی ارسال شده به "
+"ایمیلتان کلیک کنید"
+
+#: functions.php:1268 page_cp_login_lpw.php:61 page_cp_register.php:41
+#: page_cp_register.php:161
+msgid "<strong>ERROR</strong>: Incorrect Captcha."
+msgstr "<strong>خطا </strong>:کد را اشتباه وارد کرده اید."
+
+#: functions.php:1343
+msgid ""
+"This content is password protected. To view it please enter your password "
+"below:"
+msgstr ""
+"این محتوا توسط پسورد شما محافظت شده است برای مشاهده آن رمز عبور خود را وارد "
+"نمایید."
+
+#: functions.php:1387
+msgid "Edit Comment"
+msgstr "ویرایش دیدگاه"
+
+#: functions.php:1387
+msgid "Comment"
+msgstr "نظر"
+
+#: functions.php:1387 functions.php:1626 page_cp_boards.php:109
+#: page_cp_pins.php:547 page_cp_settings.php:569
+msgid "Cancel"
+msgstr "لغو"
+
+#: functions.php:1387
+msgid "Save"
+msgstr "ذخیره"
+
+#: functions.php:1581 page_cp_pins.php:84 page_cp_pins.php:326
+#: page_cp_pins.php:478
+msgid "Describe your pin..."
+msgstr "درباره تصویر توضیحی بنویسید ..."
+
+#: functions.php:1589 functions.php:1593 page_cp_pins.php:87 page_cp_pins.php:329
+#: page_cp_pins.php:481
+msgid "Title..."
+msgstr "عنوان ..."
+
+#: functions.php:1593 page_cp_pins.php:94 page_cp_pins.php:336
+#: page_cp_pins.php:488
+msgid "Description..."
+msgstr "توضیحات ..."
+
+#: functions.php:1600
+msgid "Tags e.g. comma, separated"
+msgstr "برچسب ها (با کاما , از هم جدا شوند)"
+
+#: functions.php:1607 functions.php:1611 page_cp_pins.php:119
+#: page_cp_pins.php:125 page_cp_pins.php:352 page_cp_pins.php:358
+#: page_cp_pins.php:504 page_cp_pins.php:510
+msgid "Price e.g. 23.45"
+msgstr "قیمت به عنوان مثال 23.45"
+
+#: functions.php:1616 page_cp_pins.php:137 page_cp_pins.php:371
+#: page_cp_pins.php:523
+msgid "Category for New Board"
+msgstr "انتخاب دسته برای آلبوم جدید"
+
+#: functions.php:1626
+msgid "Now"
+msgstr "الان"
+
+#: functions.php:1626
+msgid "All items loaded"
+msgstr "همه موارد بارگذاری شدند"
+
+#: functions.php:1626
+msgid "Add Another Pin"
+msgstr "افزودن تصویر دیگر"
+
+#: functions.php:1626 page_cp_pins.php:138 page_cp_pins.php:372
+#: page_cp_pins.php:524
+msgid "Add new board..."
+msgstr "افزودن آلبوم جدید"
+
+#: functions.php:1626
+msgid "Board already exists. Please try another title."
+msgstr "این آلبوم در حال حاضر وجود دارد. لطفا عنوان دیگری را امتحان کنید."
+
+#: functions.php:1626
+msgid "Error. Please try again."
+msgstr "خطا ! لطفا دوباره تلاش فرمایید ."
+
+#: functions.php:1626 single-pin.php:639
+msgid "Close"
+msgstr "بستن"
+
+#: functions.php:1626
+msgid "comment"
+msgstr "نظر"
+
+#: functions.php:1626
+msgid "comments"
+msgstr "نظر"
+
+#: functions.php:1626 page_cp_pins.php:136 page_cp_pins.php:370
+#: page_cp_pins.php:522
+msgid "Enter new board title"
+msgstr "عنوان آلبوم جدید را وارد کنید"
+
+#: functions.php:1626 page_cp_pins.php:284
+#, php-format
+msgid "Image is too small (min size: %d x %dpx)"
+msgstr "تصویر بیش از حد کوچک است (اندازه حداقل: %d x %dpx)"
+
+#: functions.php:1626
+msgid "Incorrect Username/Password"
+msgstr "نام کاربری یا رمز عبور اشتباه است"
+
+#: functions.php:1626
+msgid "Mixing video and image files is not allowed."
+msgstr "ترکیب تصویر و ویدیو مجاز نیست."
+
+#: functions.php:1626
+msgid "Multiple video upload is not allowed."
+msgstr "آپلود چندن ویدیو مجاز نیست."
+
+#: functions.php:1626
+msgid "Invalid media file. Please choose a JPG/GIF/PNG/MP4/OGG/WEBM file."
+msgstr ""
+"فرمت تصویر نامعتبر است. (فرمت های قابل استفاده: JPG/GIF/PNG/MP4/OGG/WEBM )"
+
+#: functions.php:1626
+msgid "Loading..."
+msgstr "در حال بارگذاری ... لطفا صبور باشید ..."
+
+#: functions.php:1626
+msgid "Notifications (Latest 30)"
+msgstr "آخرین اعلامیه ها"
+
+#: functions.php:1626 single-pin.php:563
+msgid "onto"
+msgstr "در"
+
+#: functions.php:1626
+msgid "Please create a new board"
+msgstr " آلبوم جدیدی ایجاد کنید"
+
+#: functions.php:1626
+msgid "Please enter title"
+msgstr "عنوان را وارد کنید"
+
+#: functions.php:1626
+msgid "Please login or register here"
+msgstr "وارد شوید یا ثبت نام کنید"
+
+#: functions.php:1626
+msgid "Please type a comment"
+msgstr "نظری بنویسید"
+
+#: functions.php:1626
+msgid "Pinned to"
+msgstr "سنجاق شده به"
+
+#: functions.php:1626
+msgid "Please enter both username and password."
+msgstr "نام کاربری و رمز عبور را وارد کنید"
+
+#: functions.php:1626
+msgid "Please enter url"
+msgstr "لطفا آدرس را وارد کنید"
+
+#: functions.php:1626 single-pin.php:85
+msgid "Repin"
+msgstr "بازنشر"
+
+#: functions.php:1626 single-pin.php:547
+msgid "Repins"
+msgstr "باز نشر"
+
+#: functions.php:1626
+msgid "Repinned to"
+msgstr "بازنشر به"
+
+#: functions.php:1626
+msgid "See This Pin"
+msgstr "مشاهده این تصویر"
+
+#: functions.php:1626
+msgid "See All"
+msgstr "مشاهده همه"
+
+#: functions.php:1626
+msgid "Share it with your friends"
+msgstr "با دوستانتان به اشتراک بگذارید"
+
+#: functions.php:1626
+msgid "Sorry, unable to find any pinnable items."
+msgstr "متاسفانه قادر به یافتن تصویر مناسب نیست!"
+
+#: functions.php:1626
+msgid "Video"
+msgstr "ویدیو"
+
+#: functions.php:1626
+msgid "Your pin is pending review"
+msgstr "تصویر شما در انتظار تایید می باشد"
+
+#: functions.php:1626
+msgid "</span></a>"
+msgstr ""
+
+#: functions.php:1884
+#, php-format
+msgid "%s repinned your \"%s\" pin at %s"
+msgstr "%sاین تصویر \"%s\" شما را باز نشر کرد در: %s"
+
+#: functions.php:1886 functions.php:1973 functions.php:2102 functions.php:2229
+#, php-format
+msgid "To change your notification settings, visit %s"
+msgstr "برای تغییر تنظیمات اعلامیه ها به این آدرس %s مراجعه کنید !"
+
+#: functions.php:1887
+#, php-format
+msgid "[%s] Someone repinned your pin"
+msgstr "[%s] کسی  تصویر شما را باز نظر کرد"
+
+#: functions.php:1971
+#, php-format
+msgid "%s liked your \"%s\" pin at %s"
+msgstr "%s تصویر \"%s\" شما را پسندید %s"
+
+#: functions.php:1974
+#, php-format
+msgid "[%s] Someone liked your pin"
+msgstr "[%s] کسی تصویر شما را پسندید"
+
+#: functions.php:2100
+#, php-format
+msgid "%s is now following you. View %s's profile at %s"
+msgstr "%s شما را دنبال می کند. مشاهده پروفایل %s در این آدرس: %s"
+
+#: functions.php:2103
+#, php-format
+msgid "[%s] Someone is following you"
+msgstr "[%s] کسی شما را دنبال می کند"
+
+#: functions.php:2227
+#, php-format
+msgid "%s commented on your \"%s\" pin at %s"
+msgstr "%s برای تصویر \"%s\" شما نظر ارسال کرد، آدرس: %s"
+
+#: functions.php:2230
+#, php-format
+msgid "[%s] Someone commented on your pin"
+msgstr "[%s] کسی در تصویر شما نظری ارسال کرد"
+
+#: functions.php:2236
+#, php-format
+msgid "New comment on the pin \"%s\""
+msgstr "نظر جدید در تصویر \"%s\""
+
+#: functions.php:2237
+#, php-format
+msgid "Author : %1$s (IP: %2$s , %3$s)"
+msgstr "نویسنده: %1$s (آی پی: %2$s, %3$s)"
+
+#: functions.php:2238
+#, php-format
+msgid "E-mail : %s"
+msgstr "ایمیل  : %s"
+
+#: functions.php:2239
+#, php-format
+msgid "URL    : %s"
+msgstr "آدرس   : %s"
+
+#: functions.php:2240
+#, php-format
+msgid "Whois  : http://whois.arin.net/rest/ip/%s"
+msgstr "دامنه : http://whois.arin.net/rest/ip/%s "
+
+#: functions.php:2241
+msgid "Comment:"
+msgstr "نظر:"
+
+#: functions.php:2242
+msgid "You can see all comments on this pin here:"
+msgstr "شما می توانید تمام نظرات تصویر را در اینجا ببینید:"
+
+#: functions.php:2244
+#, php-format
+msgid "Permalink: %s"
+msgstr "لینک ثابت: %s"
+
+#: functions.php:2245
+#, php-format
+msgid "Delete it: %s"
+msgstr "حذف: %s"
+
+#: functions.php:2246
+#, php-format
+msgid "Spam it: %s"
+msgstr "اسپم کن: %s"
+
+#: functions.php:2247
+#, php-format
+msgid "[%1$s] Comment: \"%2$s\""
+msgstr "[%1$s] نظر: \"%2$s\""
+
+#: functions.php:3089
+#, php-format
+msgid "\"%1$s\" from %2$s by %3$s."
+msgstr "\"%1$s\" از %2$s توسط %3$s."
+
+#: functions.php:3095
+#, php-format
+msgid "\"%1$s\" from %2$s."
+msgstr "\"%1$s\" از %2$s."
+
+#: functions.php:3101
+#, php-format
+msgid "\"%1$s\" by %2$s."
+msgstr "\"%1$s\" توسط %2$s."
+
+#: functions.php:3105
+#, php-format
+msgid "\"%s\"."
+msgstr "\"%s\"."
+
+#: functions.php:3119
+#, php-format
+msgid "%1$s by %2$s."
+msgstr ""
+
+#: functions.php:3140
+#, php-format
+msgid "Released: %d."
+msgstr ""
+
+#: functions.php:3148
+#, php-format
+msgid "Track %1$s of %2$s."
+msgstr ""
+
+#: functions.php:3152
+#, php-format
+msgid "Track %1$s."
+msgstr ""
+
+#: functions.php:3159
+#, php-format
+msgid "Genre: %s."
+msgstr "ژانر : %s"
+
+#: functions.php:3789 functions.php:3804
+#, php-format
+msgid "Hi %s"
+msgstr "سلام %s"
+
+#: functions.php:3790 functions.php:3805
+#, php-format
+msgid "%s wants to share \"%s\" with you."
+msgstr "%s می خواهد \"%s\" را با شما به اشتراک بگذارد ."
+
+#: functions.php:3793 functions.php:3808
+#, php-format
+msgid "%s said, \"%s\"."
+msgstr "%1$s گفت %2$s:"
+
+#: functions.php:3796 functions.php:3842
+#, php-format
+msgid "View pin at %s"
+msgstr "مشاهده تصویر در %s"
+
+#: functions.php:3797 functions.php:3812
+#, php-format
+msgid "View %s's profile at %s"
+msgstr "مشاهده پروفایل %s's در %s"
+
+#: functions.php:3798
+#, php-format
+msgid "%s wants to share a pin with you from %s"
+msgstr "%s می خواهد یک تصویر را با شما به اشتراک بگذارد از %s"
+
+#: functions.php:3811
+#, php-format
+msgid "View board at %s"
+msgstr "مشاهده آلبوم در %s"
+
+#: functions.php:3813
+#, php-format
+msgid "%s wants to share a board with you from %s"
+msgstr "%s می خواهد یک آلبوم را با شما به اشتراک بگذارد از %s"
+
+#: functions.php:3834
+#, php-format
+msgid "User(%s) reported the \"%s\" pin."
+msgstr "کاربر(%s) برای تصویر \"%s\" گزارش ارسال کرده"
+
+#: functions.php:3838
+#, php-format
+msgid "An unregistered user reported the \"%s\" pin."
+msgstr "کاربر میهمان برای تصویر \"%s\" گزارش ارسال کرده"
+
+#: functions.php:3841
+#, php-format
+msgid "Message: %s"
+msgstr "پیام : %s"
+
+#: functions.php:3843
+#, php-format
+msgid "[%s] Someone reported a pin"
+msgstr "[%s] کسی تصویری را گزارش داده"
+
+#: functions.php:3878
+msgid "Group Settings"
+msgstr "تنظیمات آلبوم"
+
+#: functions.php:3884 page_cp_login_lpw.php:205
+msgid "Lost Your Password?"
+msgstr "رمز عبور خود را فراموش کرده اید ؟"
+
+#: functions.php:3887
+msgid "Item Settings"
+msgstr "تنظیمات آیتم"
+
+#: functions.php:3893 header-color.php:120 header.php:120
+#: page_cp_settings.php:295
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: functions.php:3896 functions.php:3923 page_everything.php:10
+msgid "Everything"
+msgstr "همه چیز"
+
+#: functions.php:3902 functions.php:3922 page_popular.php:10
+msgid "Popular"
+msgstr "محبوب ترین ها"
+
+#: functions.php:3905 single-pin.php:617
+msgid "Source"
+msgstr "منبع"
+
+#: functions.php:3909 header-color.php:127 header.php:127
+#: page_cp_notifications.php:32
+msgid "Notifications"
+msgstr "اعلامیه ها"
+
+#: functions.php:3912
+msgid "Top Users"
+msgstr "کاربران برتر"
+
+#: functions.php:3921
+msgid "Categories"
+msgstr "دسته ها"
+
+#: header-color.php:95 header-color.php:115 header.php:95 header.php:115
+#: page_cp_pins.php:310 page_cp_pins.php:395
+msgid "Add Pin"
+msgstr "افزودن تصویر"
+
+#: header-color.php:103 header-color.php:116 header.php:103 header.php:116
+#: page_cp_boards.php:71 page_cp_boards.php:90
+msgid "Add Board"
+msgstr "افزودن آلبوم"
+
+#: header-color.php:118 header.php:118 page_following.php:11
+msgid "Following Feed"
+msgstr "فید دنبال های من"
+
+#: header-color.php:119 header.php:119
+msgid "Profile &amp; Pins"
+msgstr "پروفایل و تصاویر"
+
+#: header-color.php:122 header.php:122
+msgid "WP Admin"
+msgstr "مدیریت سامانه"
+
+#: header-color.php:124 header.php:124
+msgid "Log Out"
+msgstr "خروج"
+
+#: header-color.php:147 header.php:147
+msgid "Find us on Facebook"
+msgstr "ما را در فیسبوک بیابید"
+
+#: header-color.php:151 header.php:151
+msgid "Follow us on Twitter"
+msgstr "ما را در توییتر دنبال کن"
+
+#: header-color.php:154 header.php:154
+msgid "Subscribe to RSS Feed"
+msgstr "مشترک شدن در خوراک RSS"
+
+#: header-color.php:160 header-color.php:170 header.php:160 header.php:170
+#: search.php:27 search.php:215 search.php:331 search.php:391 search.php:549
+#: searchform.php:3 searchform.php:5
+msgid "Search"
+msgstr "جستجو"
+
+#: inc/includes/class-options-framework-admin.php:64
+#, php-format
+msgid ""
+"Your current theme does not have support for the Options Framework plugin.  <a "
+"href=\"%1$s\" target=\"_blank\">Learn More</a> | <a href=\"%2$s\">Hide Notice</"
+"a>"
+msgstr ""
+"قالب فعلی شما با پلاگین فریم ورک قالب سازگار نیست.   <a href=\"%1$s\" target="
+"\"_blank\">بیشتر یاد بگیرید</a> | <a href=\"%2$s\">مخفی کردن این نکته</a>"
+
+#: inc/includes/class-options-framework-admin.php:121
+#: inc/includes/class-options-framework-admin.php:122
+msgid "Theme Options"
+msgstr "تنظیمات قالب"
+
+#: inc/includes/class-options-framework-admin.php:245
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "برای بازیابی اوکی کنید! توجه داشته باشید که تمام تنظیمات شما حذف می شوند"
+
+#: inc/includes/class-options-framework-admin.php:276
+msgid "Default options restored."
+msgstr "تنظیمات پیشفرض بازگردانی شد."
+
+#: inc/includes/class-options-framework-admin.php:330
+msgid "Options saved."
+msgstr "تنظیمات ذخیره شد ."
+
+#: inc/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr "فایلی انتخاب نشده"
+
+#: inc/includes/class-options-media-uploader.php:66
+#: inc/includes/class-options-media-uploader.php:121
+msgid "Upload"
+msgstr "آپلود"
+
+#: inc/includes/class-options-media-uploader.php:68
+#: inc/includes/class-options-media-uploader.php:122
+msgid "Remove"
+msgstr "حذف"
+
+#: inc/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: inc/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr "مشاهده فایل"
+
+#: inc/includes/class-options-sanitization.php:316
+msgid "No Repeat"
+msgstr "بدون تکرار"
+
+#: inc/includes/class-options-sanitization.php:317
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:318
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:319
+msgid "Repeat All"
+msgstr "تکرار همه"
+
+#: inc/includes/class-options-sanitization.php:331
+msgid "Top Left"
+msgstr "بالا چپ"
+
+#: inc/includes/class-options-sanitization.php:332
+msgid "Top Center"
+msgstr "بالا وسط"
+
+#: inc/includes/class-options-sanitization.php:333
+msgid "Top Right"
+msgstr "بالا راست"
+
+#: inc/includes/class-options-sanitization.php:334
+msgid "Middle Left"
+msgstr "وسط چپ"
+
+#: inc/includes/class-options-sanitization.php:335
+msgid "Middle Center"
+msgstr "وسط وسط"
+
+#: inc/includes/class-options-sanitization.php:336
+msgid "Middle Right"
+msgstr "وسط راست"
+
+#: inc/includes/class-options-sanitization.php:337
+msgid "Bottom Left"
+msgstr "پایین چپ "
+
+#: inc/includes/class-options-sanitization.php:338
+msgid "Bottom Center"
+msgstr "پایین وسط"
+
+#: inc/includes/class-options-sanitization.php:339
+msgid "Bottom Right"
+msgstr "پایین راست"
+
+#: inc/includes/class-options-sanitization.php:351
+msgid "Scroll Normally"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:352
+msgid "Fixed in Place"
+msgstr "ثابت در جای خود"
+
+#: inc/includes/class-options-sanitization.php:424
+msgid "Normal"
+msgstr "عادی"
+
+#: inc/includes/class-options-sanitization.php:425
+msgid "Italic"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:426
+msgid "Bold"
+msgstr ""
+
+#: inc/includes/class-options-sanitization.php:427
+msgid "Bold Italic"
+msgstr ""
+
+#: index-masonry-inc.php:94 single-pin.php:211
+msgid "Pending Review"
+msgstr "در انتظار بررسی"
+
+#: index-masonry.php:59
+msgid "Start following some users or boards to fill this space up"
+msgstr "برای شروع ؛ کاربر یا آلبومی را دنبال کنید !"
+
+#: index.php:34
+msgid "Search free high-resolution photos"
+msgstr "در میان تصاویر با کیفیت جستجو کنید"
+
+#: index.php:41
+msgid "Common tags"
+msgstr "برچسب های رایج"
+
+#: index.php:51
+msgid "Photo by"
+msgstr "عکس توسط"
+
+#: options.php:74
+msgid "General Settings"
+msgstr "تنظیمات عمومی"
+
+#: options.php:78
+msgid "Theme color style"
+msgstr ""
+
+#: options.php:85
+msgid "Night mode start and end time"
+msgstr ""
+
+#: options.php:86
+msgid ""
+"Set time if you have selected \"day/night\" in <b>Theme color style</b> section"
+msgstr ""
+
+#: options.php:89
+msgid "Night start time (Use this format 00:00:00)"
+msgstr ""
+
+#: options.php:96
+msgid "Night end time (Use this format 00:00:00)"
+msgstr ""
+
+#: options.php:103
+msgid "Photo of the day"
+msgstr "تصویر منتخب روز"
+
+#: options.php:107 options.php:219 options.php:227 options.php:235
+#: options.php:243 options.php:259 options.php:267 options.php:275
+#: options.php:296
+msgid "Enable"
+msgstr "فعال"
+
+#: options.php:107 options.php:219 options.php:227 options.php:235
+#: options.php:243 options.php:259 options.php:267 options.php:275
+#: options.php:296
+msgid "Disable"
+msgstr "غیرفعال"
+
+#: options.php:110
+msgid "Photo of the day post"
+msgstr "پست تصویر منتخب روز"
+
+#: options.php:111
+msgid ""
+"the post ID of the photo you want to display as dailyphoto (use \"0\" for the "
+"latest photo and use \"rnd\" to get random photos)"
+msgstr ""
+
+#: options.php:118
+msgid "Photo of the day bottom text"
+msgstr "متن زیرین تصویر منتخب روز"
+
+#: options.php:119 options.php:126
+msgid "HTML allowed"
+msgstr ""
+
+#: options.php:125
+msgid "Photo of the day top text"
+msgstr "متن بالای تصویر منتخب روز"
+
+#: options.php:132
+msgid "Show Frontpage's Pins Based On"
+msgstr ""
+
+#: options.php:136 options.php:150
+msgid "Most Likes"
+msgstr "بیشترین لایک"
+
+#: options.php:136 options.php:150
+msgid "Most Repins"
+msgstr "بیشترین بازنشر"
+
+#: options.php:136 options.php:150
+msgid "Most Comments"
+msgstr "بیشترین دیدگاه"
+
+#: options.php:136
+msgid "Random"
+msgstr "تصادفی"
+
+#: options.php:136 options.php:150
+msgid "Show All"
+msgstr "مشاهده همه"
+
+#: options.php:139 options.php:153
+msgid " Over Last X Days (only for Most Likes/Repins/Comments)"
+msgstr ""
+
+#: options.php:146
+msgid "Show Popular Page's Pins Based On"
+msgstr ""
+
+#: options.php:160
+msgid ""
+"When your site is new, select \"Show All\" so that the frontpage & popular "
+"page will not be blank. As the pins get more likes, repins or comments, select "
+"as appropriate."
+msgstr ""
+
+#: options.php:164
+msgid "Header Background"
+msgstr ""
+
+#: options.php:165
+msgid "Header background image"
+msgstr ""
+
+#: options.php:170
+msgid "Header Logo Image"
+msgstr ""
+
+#: options.php:171
+msgid ""
+"Logo height should be 50px. Width is flexible. Leave blank to use site title "
+"text."
+msgstr ""
+
+#: options.php:176
+msgid "Pin It Button Image"
+msgstr "تصویر دکمه سنجاق زدن"
+
+#: options.php:177
+#, php-format
+msgid ""
+"Leave blank to use text for Pin It Button at <a href=\"%s\">Add > Pin</a>."
+msgstr ""
+
+#: options.php:182
+msgid "Default Avatar"
+msgstr "آواتار پیشفرض"
+
+#: options.php:183
+#, php-format
+msgid ""
+"Recommended size: 96 x 96px. Leave blank to use <a target=\"_blank\" href=\"%s/"
+"img/avatar-48x48.png\">Mystery Man</a>"
+msgstr ""
+
+#: options.php:188
+msgid "Top Header Message for Non Logged-in Users"
+msgstr ""
+
+#: options.php:194
+msgid "Social Icon Urls"
+msgstr ""
+
+#: options.php:195
+msgid "Facebook Url. Leave blank to hide facebook icon in header"
+msgstr ""
+
+#: options.php:201
+msgid "Twitter Url. Leave blank to hide twitter icon in header"
+msgstr ""
+
+#: options.php:207
+msgid "Frontpage Comments Number"
+msgstr ""
+
+#: options.php:208
+msgid "Enter 0 to hide comments on frontpage"
+msgstr ""
+
+#: options.php:214
+msgid "Facebook Comments"
+msgstr "نظرات فیس بوکی"
+
+#: options.php:215
+msgid "If enabled, Facebook Comments box will be displayed in single post"
+msgstr ""
+
+#: options.php:222
+msgid "Show Repins"
+msgstr "نمایش بازنشرها"
+
+#: options.php:223
+msgid "If disabled, repins are hidden from the front, categories and tags page"
+msgstr ""
+
+#: options.php:230
+msgid "Infinite Scroll"
+msgstr ""
+
+#: options.php:231
+msgid ""
+"If disabled, the normal pagination links are displayed. The theme is "
+"compatible with the <a href=\"http://wordpress.org/extend/plugins/wp-pagenavi/"
+"\">WP-PageNavi</a> plugin, but must be deactivated if you re-enable infinite "
+"scroll."
+msgstr ""
+
+#: options.php:238
+msgid "Lightbox"
+msgstr ""
+
+#: options.php:239
+msgid ""
+"If disabled, clicking on the frontpage thumbnails will go to the single post "
+"instead of opening in a lightbox."
+msgstr ""
+
+#: options.php:246
+msgid "Form Title & Description"
+msgstr "عنوان و توضیحات فرم"
+
+#: options.php:247
+msgid "For use in add/edit pins forms"
+msgstr ""
+
+#: options.php:251
+msgid "Show Single Description Field"
+msgstr ""
+
+#: options.php:251
+msgid "Show Separate Title & Description Field"
+msgstr ""
+
+#: options.php:254
+msgid "Allow HTML Code"
+msgstr ""
+
+#: options.php:255
+msgid "If enabled, the html editor will be displayed on the description field."
+msgstr ""
+
+#: options.php:262
+msgid "Allow Tags Input"
+msgstr ""
+
+#: options.php:263
+msgid "If enabled, users can add tags to pins."
+msgstr ""
+
+#: options.php:270
+msgid "Allow Source Input"
+msgstr ""
+
+#: options.php:271
+msgid "If enabled, users can add source url to pins."
+msgstr ""
+
+#: options.php:278
+msgid "Allow Price Input/Currency Symbol"
+msgstr ""
+
+#: options.php:279
+msgid ""
+"Default is $. Leave blank to disable price input and price tag shown in top "
+"left corner of the pin."
+msgstr ""
+
+#: options.php:288
+msgid "Currency symbol on the left"
+msgstr ""
+
+#: options.php:288
+msgid "Currency symbol on the right"
+msgstr ""
+
+#: options.php:291
+msgid "Allow Users to Delete Own Account"
+msgstr ""
+
+#: options.php:292
+#, php-format
+msgid ""
+"If enabled, users can delete their own account in the <a href=\"%s\">Settings</"
+"a> page. Administrator will always see the Delete Account link."
+msgstr ""
+
+#: options.php:299
+msgid "Auto Create These Boards for New Users"
+msgstr ""
+
+#: options.php:300
+msgid "Enter board names seperated by commas e.g My First Board, Gadgets, Humour"
+msgstr ""
+
+#: options.php:306
+#, php-format
+msgid ""
+"Enter category ID for each board as above e.g 1, 4, 2. You can find the "
+"category ID at <a href=\"%s\">Posts > Categories</a>"
+msgstr ""
+
+#: options.php:319
+msgid "Outgoing Email Settings"
+msgstr ""
+
+#: options.php:320
+msgid "Email address"
+msgstr ""
+
+#: options.php:326
+msgid "From whom"
+msgstr ""
+
+#: options.php:332
+msgid ""
+"Your email \"From\" field. For user email notifications for likes, follows, "
+"comments etc."
+msgstr ""
+
+#: options.php:336
+msgid "Prune Schedule"
+msgstr ""
+
+#: options.php:337
+msgid "posts every"
+msgstr ""
+
+#: options.php:343
+msgid "mins"
+msgstr ""
+
+#: options.php:349
+msgid ""
+"When a user delete a pin or a board, the posts are marked as prune for "
+"deletion later. Depending on your server load, you can adjust how often the "
+"system delete these posts."
+msgstr ""
+
+#: options.php:353
+msgid "Captcha for Register/Login Form"
+msgstr ""
+
+#: options.php:354
+msgid "reCAPTCHA Site Key"
+msgstr ""
+
+#: options.php:360
+msgid "reCAPTCHA Secret Key"
+msgstr ""
+
+#: options.php:366
+msgid ""
+"Google Web Interface <a href=\"https://sites.google.com/site/tomihasa/google-"
+"language-codes\">Language Code</a>"
+msgstr ""
+
+#: options.php:372
+msgid ""
+"Sign up for the keys at <a href=\"http://www.google.com/recaptcha/\">Google "
+"reCAPTCHA</a>. Leave blank to hide captcha."
+msgstr ""
+
+#: options.php:376
+msgid "Terms of Service Page for Register Form"
+msgstr ""
+
+#: options.php:377
+#, php-format
+msgid ""
+"Go to <a href=\"%s\">Pages > Add New</a> to create the page first. Leave blank "
+"if you do not need users to tick a box to agree to terms of service before "
+"registering."
+msgstr ""
+
+#: options.php:383
+msgid "Category For Blog"
+msgstr "دسته برای وبلاگ"
+
+#: options.php:384
+msgid ""
+"Hide blog category from the Add/Edit Board page. Leave blank if you do not "
+"need a blog yet."
+msgstr ""
+
+#: options.php:391
+msgid "Header Scripts"
+msgstr ""
+
+#: options.php:392
+msgid "Add scripts before the &lt;/head> tag"
+msgstr ""
+
+#: options.php:397
+msgid "Footer Scripts"
+msgstr ""
+
+#: options.php:398
+msgid "Add scripts before the &lt;/body> tag e.g Google Analytics"
+msgstr ""
+
+#: options.php:412
+msgid "Advertising Sections"
+msgstr ""
+
+#: options.php:416
+msgid "Header Advertisement"
+msgstr ""
+
+#: options.php:417
+msgid "HTML / PHP / Javascript allowed."
+msgstr ""
+
+#: options.php:422
+msgid "Single Post - Above Photo"
+msgstr ""
+
+#: options.php:423
+msgid ""
+"Recommended Width: 700px or lower. HTML / PHP / Javascript allowed. Note: "
+"Javascript based ads like adsense may not appear in the lightbox, only in "
+"single posts."
+msgstr ""
+
+#: options.php:428
+msgid "Single Post - Below Photo"
+msgstr ""
+
+#: options.php:429
+msgid ""
+"Recommended Width: 700px or lower. HTML / PHP / Javascript allowed. Note: "
+"Javascript based ads like adsense may not appear in the lightbox, only in "
+"single posts"
+msgstr ""
+
+#: options.php:434
+msgid "Frontpage Thumbnail Ad #1"
+msgstr ""
+
+#: options.php:435
+msgid "Display before X(th) thumbnail"
+msgstr ""
+
+#: options.php:442 options.php:455 options.php:468 options.php:481
+#: options.php:494
+msgid "Recommended Width: 200px or lower. HTML / PHP / Javascript allowed."
+msgstr ""
+
+#: options.php:447
+msgid "Frontpage Thumbnail Ad #2"
+msgstr ""
+
+#: options.php:448 options.php:461 options.php:474 options.php:487
+msgid "Display at X(th) position"
+msgstr ""
+
+#: options.php:460
+msgid "Frontpage Thumbnail Ad #3"
+msgstr ""
+
+#: options.php:473
+msgid "Frontpage Thumbnail Ad #4"
+msgstr ""
+
+#: options.php:486
+msgid "Frontpage Thumbnail Ad #5"
+msgstr ""
+
+#: options.php:499
+msgid "F.A.Q"
+msgstr ""
+
+#: options.php:503
+msgid ""
+"\n"
+"<br><u>Remember</u>: Always <b>Read our <a href=\"https://www.skilledup."
+"ir/1739/%d9%82%d8%a7%d9%84%d8%a8-%d9%be%db%8c%d9%86%da%a9%d9%88%d8%a8/\" \t\t\t"
+"\ttarget=\"_blank\">Knowledge Base</a> or <a href=\"https://www.skilledup.ir/"
+"ask-question/forum/%d9%82%d8%a7%d9%84%d8%a8-%d9%be%db%8c%d9%86%da"
+"%a9%d9%88%d8%a8/\" target=\"_blank\">Raise a Support Ticket</a> for any "
+"questions that you might have.</b><br><hr style=\"border:none;border-top:1px "
+"solid #ccc;color\" /><br>\n"
+"\t\t<h2>Recommended Plugins</h2>\n"
+"\t\t<ol>\n"
+"\t\t<li><a href=\"http://wordpress.org/extend/plugins/wp-super-cache/\" target="
+"\"_blank\">WP Super Cache</a></li>\n"
+"\t\t<ul>\n"
+"\t\t<li>- Advanced Tab: \"Don't cache pages for known users\" must be ticked</"
+"li>\n"
+"\t\t</ul>\n"
+"\n"
+"\t\t<li><a href=\"https://wordpress.org/plugins/thesography/\" target=\"_blank"
+"\">Exifography</a> (display image exif info in posts)</li>\n"
+"\t\t<ul>\n"
+"\t\t<li>- Auto insert into post: Don't select \"Automatically display exif\"</"
+"li>\n"
+"\t\t</ul>\n"
+"\n"
+"\t\t<li><a href=\"http://wordpress.org/plugins/wordpress-social-login/\" "
+"target=\"_blank\">WordPress Social Login</a> (allow users to login with "
+"Facebook or Twitter)</li>\n"
+"\t\t<ul>\n"
+"\t\t<li>- Networks Tab: tested only with Facebook, Twitter & Google</li>\n"
+"\t\t<li>- Bouncer Tab: features not supported</li>\n"
+"\t\t<li>- Widget Tab:<br />--- Users avatars: Display the default users "
+"avatars<br />--- Authentication flow: No popup window</li>\n"
+"\t\t</ul>\n"
+"\t\t<li><a href=\"http://wordpress.org/plugins/wp-postratings/\" target="
+"\"_blank\">WP-Postratings</a> (enable ratings and microformats)</li>\n"
+"\t\t<ul>\n"
+"\t\t<li>- After activation, go to Ratings -> Ratings Templates to customize "
+"its view (just in case you need to do so)</li>\n"
+"\t\t</ul>\n"
+"\t\t</ol><br>\n"
+"\t\t<hr style=\"border:none;border-top:1px solid #ccc;color\" /><br>\n"
+"\t\t<h2>Adding Pins</h2>\n"
+"\t\t<p>All users should add pins from the frontend (top right corner)  > Add "
+"Pin. Notes when adding pins from backend e.g WP-Admin > Posts > Add New</p>\n"
+"\t\t<ol>\n"
+"\t\t<li>The \"Featured Image\" must be set.</li>\n"
+"\t\t<li>The post will be assigned to the board with the same name as the post "
+"category. E.g if a post is created under the Humour category, the post will be "
+"assigned to the Humour board. If Humour board does not exist, it will be "
+"created automatically.</li>\n"
+"\t\t<ul>\n"
+"\t\t</ol>\n"
+"\t\t\n"
+"\t\t<br><hr style=\"border:none;border-top:1px solid #ccc;color\" /><br>\n"
+"\t\t<h2>Sideblog</h2>\n"
+"\t\tIf you have enabled the sideblog (General tab > Category For Blog), please "
+"do not enter tags for the sideblog posts. You can however create sub-"
+"categories under the parent blog category.\n"
+"\t\t\n"
+"\t\t<br><hr style=\"border:none;border-top:1px solid #ccc;color\" /><br>\n"
+"\t\t<h2>Permissions</h2>\n"
+"\t\t<p>You can change the Settings > General > New User Default Role, "
+"depending on your needs. If unsure, leave it as \"Author\" which best matched "
+"Pinterest.com system. The permissions for each role are as below.</p>\n"
+"\t\t<p><strong>Administrator</strong>\n"
+"\t\t- Everything</p>\n"
+"\t\t<p><strong>Editor</strong>\n"
+"\t\t- All of Author\n"
+"\t\t- Access WP-Admin\n"
+"\t\t- Publish \"Pending Review\" Pin (backend)\n"
+"\t\t- Edit/Delete Others Pin (frontend)\n"
+"\t\t- Edit/Delete Others Board (frontend)\n"
+"\t\t- Edit Others Profile (frontend)\n"
+"\t\t</p>\n"
+"\t\t<p><strong>Author</strong>\n"
+"\t\t- All of Contributor\n"
+"\t\t- Add Pin (Post Status: Published)\n"
+"\t\t- Repin\n"
+"\t\t</p>\n"
+"\t\t<p><strong>Contributor</strong>\n"
+"\t\t- All of Subscriber\n"
+"\t\t- Add Pin (Post Status: Pending Review)\n"
+"\t\t</p>\n"
+"\t\t<p><strong>Subscriber</strong>\n"
+"\t\t- Comment\n"
+"\t\t- Follow\n"
+"\t\t- Like\n"
+"\t\t</p>\n"
+"\n"
+"\t\t<br><hr style=\"border:none;border-top:1px solid #ccc;color\" /><br>\n"
+"\t\t<h2>Cautions</h2>\n"
+"\t\t<ol>\n"
+"\t\t<li>\n"
+"\t\tWP-admin > Posts > Color <br /> Use HTML Color Names as Slug (<a href="
+"\"https://www.w3schools.com/tags/ref_colornames.asp\">HTML Standard color "
+"names</a>)\n"
+"\t\t</li>\n"
+"\t\t<li>\n"
+"\t\tWP-Admin > Pages > All Pages<br />Do not change the permalink for these "
+"pages (Board Settings, Everything, Following, Login, Lost Your Password, "
+"Notifications, Pins Settings, Popular, Register, Settings, Source, Top Users)\n"
+"\t\t</li>\n"
+"\t\t<li>\n"
+"\t\tWP-Admin > Posts > Categories<br />Do not delete categories if there are "
+"already posts under them. However you can edit them or create new ones.\n"
+"\t\t</li>\n"
+"\t\t</ol>\n"
+"\t\t<br><hr style=\"border:none;border-top:1px solid #ccc;color\" /"
+"><br><br><u>Remember</u>: Always <b>Read our <a href=\"https://www.skilledup."
+"ir/1739/%d9%82%d8%a7%d9%84%d8%a8-%d9%be%db%8c%d9%86%da%a9%d9%88%d8%a8/\" "
+"target=\"_blank\">Knowledge Base</a> or <a href=\"https://www.skilledup.ir/ask-"
+"question/forum/%d9%82%d8%a7%d9%84%d8%a8-%d9%be%db%8c%d9%86%da%a9%d9%88%d8%a8/"
+"\" target=\"_blank\">Raise a Support Ticket</a> for any questions that you "
+"might have.</b>\n"
+"\t\t"
+msgstr ""
+
+#: page.php:20 page_full_width.php:22 page_no_sidebar.php:23
+msgid "Edit Page"
+msgstr "ویرایش صفحه"
+
+#: page_cp_boards.php:33 page_cp_boards.php:81
+msgid "Title"
+msgstr "عنوان"
+
+#: page_cp_boards.php:38 page_cp_boards.php:86
+msgid "Select a Category"
+msgstr "انتخاب دسته"
+
+#: page_cp_boards.php:43 page_cp_settings.php:489
+msgid "Save Settings"
+msgstr "ذخیره تنظیمات"
+
+#: page_cp_boards.php:48 page_cp_boards.php:110
+msgid "Delete Board"
+msgstr "حذف آلبوم"
+
+#: page_cp_boards.php:58
+msgid "No boards found."
+msgstr "آلبومی یافت نشد !"
+
+#: page_cp_boards.php:105
+msgid "All pins on this board will also be deleted."
+msgstr "همه تصاویر مربوط به این آلبوم حذف خواهند شد !"
+
+#: page_cp_boards.php:105
+msgid "Are you sure you want to permanently delete this board?"
+msgstr "آیا برای حذف این آلبوم اطمینان دارید ؟"
+
+#: page_cp_login.php:30
+msgid "Logged Out Successfully"
+msgstr "با موفقیت خارج شدید !"
+
+#: page_cp_login.php:40
+msgid "Your password has been reset."
+msgstr "رمز عبور شما مجددا تنظیم شده است"
+
+#: page_cp_login.php:42
+msgid "User registration is currently closed."
+msgstr "ثبت نام ، هم اكنون امکان پذیر نیست."
+
+#: page_cp_login.php:44
+msgid "To activate account, please check your email for verification link."
+msgstr ""
+"برای فعالسازی حساب خود بر روی لینک  تاییدیه ارسال شده به ایمیلتان کلیک کنید ."
+
+#: page_cp_login.php:46
+msgid "Account not activated yet. Please check your email for verification link."
+msgstr ""
+"حساب شما هنوز فعال نشده است .برای تایید لینک فعال سازی ارسال شده به ایمیلتان "
+"را ببینید"
+
+#: page_cp_login.php:53
+msgid "Verification success. You may login now."
+msgstr "فعالسازی با موفیت انجام شد .اکنون وارد سایت شوید "
+
+#: page_cp_login.php:55 page_cp_settings.php:341
+msgid "Invalid verification key"
+msgstr "فعال سازی موفقیت آمیز نبود!"
+
+#: page_cp_login.php:58
+msgid "Incorrect Username"
+msgstr "نام کاربری اشتباه است"
+
+#: page_cp_login.php:58
+msgid "Captcha"
+msgstr "کد امنیتی"
+
+#: page_cp_login.php:95
+msgid "Don't have an account? Sign Up Now"
+msgstr "هنوز عضو نشده اید ؟ اکنون به جمع ما بپیوندید !"
+
+#: page_cp_login_lpw.php:32 page_cp_register.php:145
+msgid "The passwords do not match."
+msgstr "رمز عبور صحیح نیست !"
+
+#: page_cp_login_lpw.php:34
+msgid "Passwords must be at least 6 characters long."
+msgstr "رمز عبور حداقل باید 6 کاراکتر باشد !"
+
+#: page_cp_login_lpw.php:66
+msgid "<strong>ERROR</strong>: Enter a username or e-mail address."
+msgstr "<strong>خطا</strong>: لطفا نام کاربری یا آدرس ایمیل خود را وارد کنید."
+
+#: page_cp_login_lpw.php:70
+msgid ""
+"<strong>ERROR</strong>: There is no user registered with that email address."
+msgstr "<strong>خطا</strong>: هيچ کاربری با اين آدرس ايميل وجود ندارد."
+
+#: page_cp_login_lpw.php:87
+msgid "<strong>ERROR</strong>: Invalid username or e-mail."
+msgstr "<strong>خطا</strong>: نام کاربری یا آدرس ایمیل نامعتبر است."
+
+#: page_cp_login_lpw.php:125
+msgid "Password reset is not allowed for this user"
+msgstr "تنظیم مجدد رمز عبور برای این کاربر مجاز نیست !"
+
+#: page_cp_login_lpw.php:150
+msgid "Someone requested that the password be reset for the following account:"
+msgstr ""
+"شخصی درخواست رمز عبور جدید  برای این حساب کاربری را به سایت ارسال کرده است:"
+
+#: page_cp_login_lpw.php:152 page_cp_register.php:52 page_cp_register.php:76
+#: page_cp_register.php:225
+#, php-format
+msgid "Username: %s"
+msgstr "نام کاربری : %s"
+
+#: page_cp_login_lpw.php:153
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+"چنانچه این اتفاق مطابق با خواسته شما نبوده است، کافی است دریافت این ایمیل را "
+"فراموش کرده و یا حتی آن را پاک کنید. در این صورت هیچ تغییری در حساب کاربری شما "
+"رخ نخواهد داد."
+
+#: page_cp_login_lpw.php:154
+msgid "To reset your password, visit the following address:"
+msgstr "برای تنظیم مجدد کلمه عبورتان، این آدرس را دنبال کنید:"
+
+#: page_cp_login_lpw.php:166
+#, php-format
+msgid "[%s] Password Reset"
+msgstr "[%s] تنظیم مجدد کلمه عبور"
+
+#: page_cp_login_lpw.php:191
+msgid "The e-mail could not be sent."
+msgstr "ایمیل ارسال نمی شود."
+
+#: page_cp_login_lpw.php:191
+msgid "Possible reason: your host may have disabled the mail() function."
+msgstr "دلیل احتمالی: میزبان شما ممکن است تابع mail() را غیرفعال کرده باشد."
+
+#: page_cp_login_lpw.php:210
+msgid "Check your e-mail for the confirmation link."
+msgstr "ايميل خود را برای دریافت لينک تأييد بررسي کنيد."
+
+#: page_cp_login_lpw.php:212
+msgid "Sorry, that key does not appear to be valid."
+msgstr "با عرض پوزش، این کلید معتبر به نظر نمی رسد. لطفا مجددا سعی نماييد."
+
+#: page_cp_login_lpw.php:234
+msgid "Get New Password"
+msgstr "کلمه عبور جدید"
+
+#: page_cp_login_lpw.php:237
+msgid "You will receive a link to create a new password via email."
+msgstr ""
+"شما یک لینک برای ایجاد یک کلمه عبور جدید را از طریق ایمیل دریافت خواهید کرد."
+
+#: page_cp_login_lpw.php:240
+msgid "Reset Password"
+msgstr "تغییر رمز عبور"
+
+#: page_cp_login_lpw.php:250
+msgid "New password"
+msgstr "رمز عبور جدید"
+
+#: page_cp_login_lpw.php:255
+msgid "Confirm new password"
+msgstr "تأیید رمز عبور جدید"
+
+#: page_cp_notifications.php:33
+msgid "Only notifications from last 30 days are available for viewing"
+msgstr "فقط اعلان های 30 روز گذشته برای مشاهده در دسترس هستند"
+
+#: page_cp_notifications.php:37
+msgid "No Notifications Yet."
+msgstr "بدون اطلاعیه"
+
+#: page_cp_notifications.php:71
+msgid "liked your"
+msgstr "شما را لایک کرد"
+
+#: page_cp_notifications.php:75
+msgid "repinned your"
+msgstr "شما را باز نشر کرد"
+
+#: page_cp_notifications.php:78
+msgid "is following you"
+msgstr "شما را دنبال میکند"
+
+#: page_cp_notifications.php:81
+msgid "commented on your"
+msgstr "نظر ارسال کرد برای"
+
+#: page_cp_pins.php:32
+msgid "Edit Pin"
+msgstr "ویرایش تصویر"
+
+#: page_cp_pins.php:40
+msgid "Please select featured image that will be used as thumbnail for your pin"
+msgstr ""
+
+#: page_cp_pins.php:132 page_cp_pins.php:365 page_cp_pins.php:517
+msgid "Source e.g. http://domain.com/link"
+msgstr "مثال : http://domain.com/link"
+
+#: page_cp_pins.php:142
+msgid "Save Pin"
+msgstr "ذخیره تصویر"
+
+#: page_cp_pins.php:146 page_cp_pins.php:548
+msgid "Delete Pin"
+msgstr "حذف تصویر"
+
+#: page_cp_pins.php:156
+msgid "No pins found."
+msgstr "تصویری یافت نشد"
+
+#: page_cp_pins.php:286
+msgid "Invalid image file."
+msgstr "فرمت تصویر نامعتبر است"
+
+#: page_cp_pins.php:290
+msgid "Unable to fetch image from remote site"
+msgstr "قادر به دریافت تصویر از سایت دیگر نیستیم"
+
+#: page_cp_pins.php:292
+msgid "Please save image onto device and upload from device."
+msgstr "لطفا تصویر را بر روی سیستم خود ذخیره وسپس آپلود کنید !"
+
+#: page_cp_pins.php:377 page_cp_pins.php:529
+msgid "Pin It"
+msgstr "سنجاق کن"
+
+#: page_cp_pins.php:402
+msgid "<h4>From device</h4>"
+msgstr "<h4>از حافظه دستگاه</h4>"
+
+#: page_cp_pins.php:405 page_cp_settings.php:498 page_cp_settings.php:524
+msgid "Browse &amp; Upload"
+msgstr "انتخاب و بارگذاری"
+
+#: page_cp_pins.php:421
+msgid "From Web"
+msgstr "از آدرس"
+
+#: page_cp_pins.php:428
+msgid "Fetch"
+msgstr "بررسی"
+
+#: page_cp_pins.php:448
+msgid "Pin It Bookmarklet"
+msgstr "کلید بوکمارک"
+
+#: page_cp_pins.php:450
+msgid ""
+"Drag the above button to your bookmarks/favorites toolbar. Then click to pin "
+"an image from any website. You can also pin videos from"
+msgstr ""
+"کلید بوکمارک را بر روی بخش بوکمارک یا علاقه مندی های مرورگر خود بکشید‫ و یا با "
+"کیلک راست آن را به بوکمارک های خود اضافه کنید.‬ سپس در هر وبسایتی با کلیک بر "
+"روی این دکمه می توانید مستقیما تصاویر مورد علاقه خود رابه آلبوم هایتان بچسبانید"
+
+#: page_cp_pins.php:450
+msgid "youtube.com/vimeo.com"
+msgstr ""
+
+#: page_cp_pins.php:469
+msgid "please select the main picture to use as thumbnail."
+msgstr "لطفا تصویر شاخص این پست را انتخاب نمایید."
+
+#: page_cp_pins.php:544
+msgid "Are you sure you want to permanently delete this pin?"
+msgstr "آیا مطمئن هستید که می خواهید این تصویر را برای همیشه حذف کنید؟"
+
+#: page_cp_register.php:27
+msgid "<strong>ERROR</strong>: Enter email address."
+msgstr "<strong>ERROR:</strong> آدرس ایمیل را وارد کنید."
+
+#: page_cp_register.php:51 page_cp_register.php:75 page_cp_register.php:224
+#, php-format
+msgid "Thank you for registering with %s."
+msgstr "با تشکر از شما برای ثبت نام با %s."
+
+#: page_cp_register.php:53 page_cp_register.php:77 page_cp_register.php:227
+#: page_cp_settings.php:224
+msgid "Please click the link to verify your email:"
+msgstr ""
+"لطفاً به منظور تایید و فعال سازی حساب کاربری خود، بروی لینک زیر کلیک کنید:"
+
+#: page_cp_register.php:56 page_cp_register.php:80 page_cp_register.php:230
+#, php-format
+msgid "[%s] Account Registration"
+msgstr "[%s] حساب کاربری شما ثبت شد"
+
+#: page_cp_register.php:60 page_cp_register.php:84
+msgid "<strong>ERROR</strong>: Account is already activated."
+msgstr "<strong>خطا</strong>: حساب کاربری در حال حاضر فعال است."
+
+#: page_cp_register.php:63 page_cp_register.php:87
+msgid "<strong>ERROR</strong>: Email not found."
+msgstr "<strong>خطا</strong>: ایمیل پیدا نشد."
+
+#: page_cp_register.php:119 page_cp_settings.php:21 page_cp_settings.php:157
+msgid "<strong>ERROR</strong>: Please enter a username."
+msgstr "<strong>خطا:</strong> لطفا یک نام کاربری  وارد کنید."
+
+#: page_cp_register.php:121 page_cp_settings.php:23 page_cp_settings.php:201
+msgid ""
+"<strong>ERROR</strong>: This username is invalid because it uses illegal "
+"characters. Please enter a valid username."
+msgstr ""
+"<strong>خطا</strong>: نام کاربری وارد شده نامعتبر است، زیرا در آن از "
+"کاراکترهای غیر مجاز استفاده شده است. لطفا یک نام کاربری مجاز وارد کنید."
+
+#: page_cp_register.php:124 page_cp_settings.php:26 page_cp_settings.php:204
+msgid ""
+"<strong>ERROR</strong>: This username is already registered. Please choose "
+"another one."
+msgstr ""
+"<strong>خطا:</strong> این نام کاربری قبلاً ثبت شده است. لطفاً نام کاربری دیگری "
+"را انتخاب نماييد."
+
+#: page_cp_register.php:129
+msgid "<strong>ERROR</strong>: Please type your e-mail address."
+msgstr "<strong>خطا</strong>: لطفا آدرس ایمیل خود را وارد کنید."
+
+#: page_cp_register.php:131 page_cp_settings.php:211
+msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
+msgstr "<strong>خطا:</strong> آدرس ایمیل صحیح نمی باشد."
+
+#: page_cp_register.php:134 page_cp_settings.php:213
+msgid ""
+"<strong>ERROR</strong>: This email is already registered, please choose "
+"another one."
+msgstr ""
+"<strong>خطا</strong>: آدرس ایمیل وارد شده قبلا در سایت ثبت شده است. لطفا آدرس "
+"ایمیل دیگری انتخاب و وارد کنید."
+
+#: page_cp_register.php:139
+msgid "Password cannot be blank."
+msgstr "رمز عبور نمی تواند خالی باشد."
+
+#: page_cp_register.php:167
+msgid "Antispam field is incorrect."
+msgstr "کد امنیتی نادرست است."
+
+#: page_cp_register.php:208
+#, php-format
+msgid ""
+"<strong>ERROR</strong>: Couldn&#8217;t register you&hellip; please contact the "
+"<a href=\"mailto:%s\">webmaster</a> !"
+msgstr ""
+"<strong>خطا:</strong> امکان ثبت نام برای شما ممکن نیست، لطفاً در صورت نیاز به "
+"<a href=\"mailto:%s\">مدیریت</a> ایمیل ارسال کنید."
+
+#: page_cp_register.php:226
+#, php-format
+msgid "Password: %s"
+msgstr "%s : رمز عبور"
+
+#: page_cp_register.php:252
+msgid "Resend Activation Email"
+msgstr "ارسال مجدد ایمیل فعالسازی"
+
+#: page_cp_register.php:255
+msgid "Please check your email for activation."
+msgstr "لطفا ایمیل خود را برای فعالسازی چک کنید ."
+
+#: page_cp_register.php:264 page_cp_register.php:305 page_cp_settings.php:350
+msgid "Email"
+msgstr "ایمیل"
+
+#: page_cp_register.php:279
+msgid "Resend"
+msgstr "ارسال مجدد"
+
+#: page_cp_register.php:282
+msgid "Check your junk/spam folder if you did not receive the activation email"
+msgstr ""
+"اگر ایمیل فعال سازی دریافت نکردید، پوشه هرزنامه و اسپم ایمیل خود را نیز بررسی "
+"کنید"
+
+#: page_cp_register.php:300
+msgid "Username"
+msgstr "نام کاربری"
+
+#: page_cp_register.php:315 page_cp_settings.php:364
+msgid "Confirm Password"
+msgstr "تایید رمز عبور"
+
+#: page_cp_register.php:344
+msgid "I Agree To The"
+msgstr "موافقم"
+
+#: page_cp_register.php:346
+msgid "Terms of Service"
+msgstr "قوانین و مقررات"
+
+#: page_cp_register.php:355
+msgid "Already have an account? Login now"
+msgstr "آیا قبلا  عضو شده اید ؟ وارد شوید"
+
+#: page_cp_register.php:359
+msgid "Resend activation email"
+msgstr "ارسال دوباره ایمیل فعالسازی"
+
+#: page_cp_settings.php:107
+msgid "You can&#8217;t give users that role."
+msgstr ""
+
+#: page_cp_settings.php:173 page_cp_settings.php:175
+msgid "<strong>ERROR</strong>: You entered your new password only once."
+msgstr "<strong>خطا</strong>: شما رمز عبور جدید خود را تنها یکبار وارد کردید"
+
+#: page_cp_settings.php:184
+msgid "<strong>ERROR</strong>: Please enter your password."
+msgstr "<strong>خطا</strong>: لطفا رمزعبور خود را وارد نماييد."
+
+#: page_cp_settings.php:186
+msgid "<strong>ERROR</strong>: Please enter your password twice."
+msgstr "<strong>خطا</strong>: لطفا رمزعبور را دو بار وارد نماييد."
+
+#: page_cp_settings.php:191
+msgid "<strong>ERROR</strong>: Passwords may not contain the character \"\\\"."
+msgstr "<strong>خطا</strong>: رمز عبور نمی تواند شامل کاراکتر  \"\\\\\" باشد."
+
+#: page_cp_settings.php:195
+msgid ""
+"<strong>ERROR</strong>: Please enter the same password in the two password "
+"fields."
+msgstr "<strong>خطا</strong>: لطفا رمز عبور یکسانی را در هر دو فیلد وارد کنید."
+
+#: page_cp_settings.php:209
+msgid "<strong>ERROR</strong>: Please enter an email address."
+msgstr "<strong>خطا</strong>: لطفایک آدرس ایمیل وارد نماييد."
+
+#: page_cp_settings.php:228
+#, php-format
+msgid "[%s] Email Verification"
+msgstr "[%s] تایید ایمیل"
+
+#: page_cp_settings.php:280
+msgid "No Such User."
+msgstr "چنین کاربری وجود ندارد."
+
+#: page_cp_settings.php:282
+msgid "Administrator Profile: No Access"
+msgstr "پروفایل مدیر: عدم دسترسی"
+
+#: page_cp_settings.php:317
+msgid "Change Profile Username? (Days Left:"
+msgstr "تغییر مشخصات نام کاربری? (روزهای گذشته :"
+
+#: page_cp_settings.php:321
+msgid "Change"
+msgstr "تغییر"
+
+#: page_cp_settings.php:322
+msgid ""
+"You will be logged out upon successful changing of username. Please login "
+"again with"
+msgstr "پس از تغییر موفق نام کاربری خارج خواهيد شد. لطفا دوباره وارد شوید با"
+
+#: page_cp_settings.php:331
+msgid "Settings Saved."
+msgstr "تنظیمات ذخیره شد ."
+
+#: page_cp_settings.php:335
+msgid ""
+"Your email will be changed upon verification. Please check your new email for "
+"verification link."
+msgstr ""
+"ایمیل شما پس از تأیید تغییر کرده است. لطفاً ایمیل جدید خود را برای لینک تایید "
+"چک کنید."
+
+#: page_cp_settings.php:339
+msgid "Your email has been verified and updated."
+msgstr "ایمیل شما تایید و به روز شده است."
+
+#: page_cp_settings.php:353 page_cp_settings.php:428
+msgid "Invalid email provided by"
+msgstr "ایمیل نامعتبر ارائه شده توسط"
+
+#: page_cp_settings.php:353 page_cp_settings.php:428
+msgid "Please enter a valid email to receive email notifications."
+msgstr "لطفا یک ایمیل معتبر برای دریافت اطلاعیه ها وارد کنید."
+
+#: page_cp_settings.php:366
+msgid ""
+"If you would like to change the password, type a new one. Otherwise leave them "
+"blank."
+msgstr ""
+"درصورتی که می خواهید رمزعبور تان را تغییر دهید، این فیلد را پر کنید، در غیر "
+"اینصورت آن را خالی بگذارید."
+
+#: page_cp_settings.php:374
+msgid "Profile"
+msgstr "پروفایل"
+
+#: page_cp_settings.php:374
+msgid "See Your Public Profile"
+msgstr "مشخصات عمومی خود را ببینید"
+
+#: page_cp_settings.php:378
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+#: page_cp_settings.php:383
+msgid "About"
+msgstr "درباره من"
+
+#: page_cp_settings.php:388
+msgid "Location"
+msgstr "موقعیت مکانی"
+
+#: page_cp_settings.php:389
+msgid "city, country"
+msgstr "شهر، کشور"
+
+#: page_cp_settings.php:393
+msgid "Website"
+msgstr "وب سایت"
+
+#: page_cp_settings.php:394
+msgid "myweb.com"
+msgstr "مثال: myweb.com"
+
+#: page_cp_settings.php:398
+msgid "Facebook Username"
+msgstr "نام کاربری فیسبوک"
+
+#: page_cp_settings.php:399
+msgid "myfb"
+msgstr "مثال: myfb"
+
+#: page_cp_settings.php:403
+msgid "Twitter Username"
+msgstr "نام کاربری توییتر"
+
+#: page_cp_settings.php:404
+msgid "mytwitter"
+msgstr "مثال: mytwitter"
+
+#: page_cp_settings.php:408
+msgid "Pinterest Username"
+msgstr "نام کاربری پینترست"
+
+#: page_cp_settings.php:409
+msgid "mypinterest"
+msgstr "مثال: mypinterest"
+
+#: page_cp_settings.php:413
+msgid "Google+ ID"
+msgstr "شناسه گوگل +"
+
+#: page_cp_settings.php:414
+msgid "+mygoogle or 123456789"
+msgstr "+ mygoogle یا 123456789"
+
+#: page_cp_settings.php:418
+msgid "Instagram ID"
+msgstr ""
+
+#: page_cp_settings.php:419
+msgid "myinstagram"
+msgstr ""
+
+#: page_cp_settings.php:425
+msgid "Email Notifications"
+msgstr "اعلان های ایمیل"
+
+#: page_cp_settings.php:442
+msgid "Notify when someone follows me"
+msgstr "اگر کاربری من را دنبال کرد  خبر بده"
+
+#: page_cp_settings.php:455
+msgid "Notify when someone likes my pin"
+msgstr "اگر کاربری تصویر من را لایک کرد خبر بده"
+
+#: page_cp_settings.php:468
+msgid "Notify when someone repins my pin"
+msgstr "اگر کاربری تصویر من را بازنشر کرد خبر بده"
+
+#: page_cp_settings.php:481
+msgid "Notify when someone comments on my pin"
+msgstr "اگر کسی برای تصویر من نظر گذاشت خبر بده"
+
+#: page_cp_settings.php:494
+msgid "Avatar (Recommended 300 x 300px)"
+msgstr "آواتار (توصیه شده 300 * 300px)"
+
+#: page_cp_settings.php:520
+msgid "Profile Cover (Recommended 1500 x 300px)"
+msgstr "کاور پروفایل (توصیه شده 1،500 X 300px)"
+
+#: page_cp_settings.php:547 page_cp_settings.php:571
+msgid "Delete Account"
+msgstr "حذف حساب کاربری"
+
+#: page_cp_settings.php:562
+msgid "All data and profile will be deleted."
+msgstr "تمام داده ها و اطلاعات عمومی حذف خواهد شد."
+
+#: page_cp_settings.php:562
+msgid "Are you sure you want to permanently delete this account?"
+msgstr "آیا مطمئن هستید می خواهید حساب کاربری را برای همیشه حذف کنید؟"
+
+#: page_cp_settings.php:564
+msgid ""
+"This is an administrator account. To delete this account, go to WP-Admin > "
+"Users."
+msgstr ""
+"این یک حساب کاربری مدیر سیستم باشد. برای حذف این حساب، به WP-مدیریت> کاربران."
+
+#: page_gifts.php:34 page_gifts.php:46 page_popular.php:18
+msgid "All"
+msgstr "همه"
+
+#: page_gifts.php:43
+msgid "Price"
+msgstr "قیمت"
+
+#: page_gifts.php:54
+msgid "Sort by"
+msgstr "منظم کردن بر اساس"
+
+#: page_gifts.php:55 search.php:376 search.php:535
+msgid "Most recent"
+msgstr "جدیدترین مطالب"
+
+#: page_gifts.php:56 search.php:377 search.php:536
+msgid "Most popular"
+msgstr "محبوبترین ها"
+
+#: page_gifts.php:57 search.php:379 search.php:538
+msgid "Price lowest"
+msgstr "پایین ترین قیمت"
+
+#: page_gifts.php:58 search.php:380 search.php:539
+msgid "Price highest"
+msgstr "بالاترین قیمت"
+
+#: page_top_users.php:10
+msgid "Top Users (Most Followers)"
+msgstr "کاربران برتر (بیشترین دنبال شده)"
+
+#: page_top_users.php:104 page_top_users.php:203 search.php:318
+msgid "Nobody yet."
+msgstr "هنوز هیچکس."
+
+#: page_top_users.php:114
+msgid "Top Users (Most Pins)"
+msgstr "کاربران برتر (بیشترین تصویر)"
+
+#: pinc_fetch.php:184
+msgid "Invalid content"
+msgstr "محتوا نامعتبر است"
+
+#: pinc_fetch.php:189
+msgid "Invalid response code"
+msgstr "کد پاسخ نامعتبر است"
+
+#: pinc_fetch.php:194
+msgid "Invalid url"
+msgstr "آدرس اشتباه است"
+
+#: search.php:8
+msgid "My Own Pins"
+msgstr "تصاویر خودم"
+
+#: search.php:12
+msgid "Tags"
+msgstr "برچسب"
+
+#: search.php:15
+msgid "Users"
+msgstr "کاربر"
+
+#: search.php:25 search.php:213 search.php:329 search.php:369 search.php:530
+msgid "Search..."
+msgstr "جستجو ..."
+
+#: search.php:372 search.php:532
+msgid "All categories"
+msgstr "همه دسته ها"
+
+#: search.php:385 search.php:544
+msgid "Min Price"
+msgstr "کمترین قیمت"
+
+#: search.php:386 search.php:545
+msgid "Max Price"
+msgstr "بیشترین قیمت"
+
+#: sidebar-right.php:151 single-pin.php:475
+msgid "Also from"
+msgstr "همچنین از"
+
+#: single-masonry.php:91
+msgid "Related Pins"
+msgstr "تصاویر مشابه"
+
+#: single-pin.php:91
+msgid "Like"
+msgstr "لایک"
+
+#: single-pin.php:95
+msgid "Cannot Like Own Pin"
+msgstr "شما نمیتوانید تصویر خود را لایک کنید"
+
+#: single-pin.php:110 single-pin.php:588
+msgid "Embed"
+msgstr "جاسازی کردن"
+
+#: single-pin.php:116
+msgid "Zoom"
+msgstr "بزرگ نمایی"
+
+#: single-pin.php:122
+msgid "Download"
+msgstr "دانلود تصویر"
+
+#: single-pin.php:132 single-pin.php:630
+msgid "Report"
+msgstr "گزارش"
+
+#: single-pin.php:388
+msgid "Repinned from"
+msgstr "باز نشر شده از"
+
+#: single-pin.php:534
+msgid "more likes"
+msgstr "لایک های بیشتر"
+
+#: single-pin.php:576
+msgid "more repins"
+msgstr "باز نشرهای بیشتر"
+
+#: single-pin.php:599
+msgid "px -Image Width"
+msgstr "px - عرض تصویر"
+
+#: single-pin.php:611
+msgid "px -Image Height"
+msgstr "px - ارتفاع تصویر"
+
+#: single-pin.php:617
+msgid "via"
+msgstr "از طریق"
+
+#: single-pin.php:617
+msgid "on"
+msgstr "روشن"
+
+#: single-pin.php:635
+msgid "Please write a little about why you want to report this pin."
+msgstr "لطفاً دلیل گزارش را بنویسید."
+
+#: single-pin.php:636
+msgid "Pin reported. Thank you for your submission."
+msgstr "تصویر گزارش شد ، از شما متشکریم ."
+
+#: single-pin.php:638
+msgid "Report Pin"
+msgstr "گزارش تصویر"
+
+#~ msgid "Color"
+#~ msgstr "رنگبندی"
+
+#~ msgid ""
+#~ "Make it easy for people to pin from your site. Copy the code below and "
+#~ "paste it where you want the button to appear on your website."
+#~ msgstr ""
+#~ "اگر دوست دارید دیگران به راحتی تصاویر سایت یا وبلاگ شما را سنجاق کنند "
+#~ "کافیست که کد زیر را در جایی که دوست دارید در سایت شما نشان داده شود قرار "
+#~ "بدهید .-"
