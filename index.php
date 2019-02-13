@@ -15,11 +15,6 @@ if(of_get_option('daily_photo_feature') == 'on') {
 	$id = of_get_option('mainpage_daily_photo');
 	$hUrl = home_url( '/' );
 	echo '
-	<style>
-	.dropdown.hidden-xs {
-		display: none;
-	}
-	</style>
 	<div class="rnd-image" style="background: url('. dailyImage($id) .') no-repeat center center fixed; background-size: cover; color: #fff; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
 	    <div class="container-main">
 	        <div class="solgan-main">

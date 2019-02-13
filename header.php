@@ -154,7 +154,7 @@
 					<?php } ?>
 
 					<li><a class="topmenu-icons" href="<?php bloginfo('rss2_url'); ?>" rel="tooltip" data-placement="bottom" title="<?php _e('Subscribe to RSS Feed', 'pinc'); ?>"><i class="fas fa-rss"></i></a></li>
-
+					<?php if ( is_home() == false || of_get_option('daily_photo_feature') == 'off' ) { ?>
 					<li class="dropdown hidden-xs"><a id="topmenu-search" class="dropdown-toggle topmenu-icons" data-toggle="dropdown" href=""><i class="fas fa-search"></i></a>
 						<ul id= "dropdown-search" class="dropdown-menu">
 							<li>
@@ -166,6 +166,7 @@
 							</li>
 						</ul>
 					</li>
+					<?php }?>
 				</ul>
 
 				<form class="navbar-form visible-xs" method="get" id="searchform-mobile" action="<?php echo home_url('/'); ?>">
