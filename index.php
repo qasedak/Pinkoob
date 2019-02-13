@@ -16,7 +16,7 @@ if(of_get_option('daily_photo_feature') == 'on') {
 	$hUrl = home_url( '/' );
 	echo '
 	<style>
-	.nav.navbar-nav.search {
+	.dropdown.hidden-xs {
 		display: none;
 	}
 	</style>
