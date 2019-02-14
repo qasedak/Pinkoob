@@ -700,7 +700,11 @@
 				<h4><?php _e('Color scheme','pinc'); ?></h4>
 					<?php
 					/* Beta Color category */
-					echo the_terms( $post->ID, 'color', '<div class="color-theme"><div class="color-container"><label class="color">', '، ', '</label></div></div>' );
+					if(!empty(get_the_term_list( $post->ID, 'color'))){
+						the_terms( $post->ID, 'color', '<div class="color-theme"><div class="color-container"><label class="color">', '، ', '</label></div></div>' );
+					}else{
+						echo '<p class="text-center">' . __('No color has been selected yet!','pinc') .'</p>';
+					}
 					if ($post->post_author == $user_ID || current_user_can('edit_others_posts')) {
 						$poID = get_the_ID();
 						color_cat_formSP($poID);
