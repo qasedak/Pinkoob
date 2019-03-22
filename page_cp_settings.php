@@ -317,8 +317,13 @@ get_header();
 					</div>
 					
                 <?php if ($user_info->wsl_current_provider == '') { ?>
-                <input class="btn btn-success btn-sm" id="passbotton" type="button" value="<?php _e('Change password', 'pinc'); ?>" onclick="addRow()">
                 <div class="form-group" id="passfields"></div>
+                <?php if (of_get_option('delete_account') == 'enable' && (current_user_can('administrator') || $user_info->ID == $user_ID)) { ?>
+			        <p class="moreoptions text-center">
+			            <button class="btn btn-grey btn-sm" id="passbutton" type="button" onclick="addRow()"><?php _e('Change password', 'pinc'); ?></button>
+			            <button class="btn btn-danger btn-sm" id="pinc-delete-account" type="button"><?php _e('Delete Account', 'pinc'); ?></button>
+			    <?php } ?>
+			        </p>
                 <?php } ?>
 
 				<?php if ($user_info->wsl_current_provider != '' && $wsl_email_example === false) { ?>
@@ -329,7 +334,9 @@ get_header();
 				<br />
 				
 				<div id="profile" class="form-group">
-				    <a class="btn btn-success btn-sm" href="<?php if ($_GET['user']) echo get_author_posts_url($_GET['user']); else echo get_author_posts_url($user_ID);  ?>" target="_blank"><strong><?php _e('See Your Public Profile', 'pinc'); ?></strong></a>
+				    <p class="moreoptions text-center">
+				        <a class="btn btn-success btn-sm" href="<?php if ($_GET['user']) echo get_author_posts_url($_GET['user']); else echo get_author_posts_url($user_ID);  ?>" target="_blank"><strong><?php _e('See Your Public Profile', 'pinc'); ?></strong></a>
+				    </p>
 				<div class="form-group">
 					<label class="form-label" for="display_name"><?php _e('Display Name', 'pinc'); ?></label>
 					<input class="form-control" type="text" name="display_name" id="display_name" value="<?php echo esc_attr($user_info->display_name); ?>" tabindex="40" />
@@ -498,12 +505,7 @@ get_header();
 				<div class="error-msg-cover"></div>
 			</form>
 
-			<?php if (of_get_option('delete_account') == 'enable' && (current_user_can('administrator') || $user_info->ID == $user_ID)) { ?>
-			<br />
-			<p class="moreoptions text-center">
-			<button class="btn btn-grey" id="pinc-delete-account" type="button"><?php _e('Delete Account', 'pinc'); ?></button>
-			<?php } ?>
-			</p>
+
 		</div>
 
 		<div class="col-sm-2"></div>
@@ -548,17 +550,19 @@ get_header();
 				<p class="help-block"><?php _e('If you would like to change the password, type a new one.Otherwise leave them blank.', 'pinc'); ?></p>\
             </div>';
         document.getElementById('passfields').appendChild(div);
-        var bottonelem = document.getElementById("passbotton");
-        bottonelem.classList.add('hidden');
+        var buttonelem = document.getElementById("passbutton");
+        buttonelem.classList.add('hidden');
     }
     function addgeneraltab() {
         var generaltab = document.getElementById("general");
         var profiletab = document.getElementById("profile");
         var generalpassfields = document.getElementById("passfields");
-        var generalpassbot = document.getElementById("passbotton");
+        var generalpassbot = document.getElementById("passbutton");
         var avatarform = document.getElementById("avatarform");
         var coverform = document.getElementById("coverform");
         var emailtab = document.getElementById("emailnoti");
+        var delectaccount = document.getElementById("pinc-delete-account");
+        delectaccount.classList.remove('hider');
         generalpassfields.classList.remove('hider');
         generaltab.classList.remove('hider');
         profiletab.classList.add('hider');
@@ -572,10 +576,12 @@ get_header();
     function addprofiletab() {
         var generaltab = document.getElementById("general");
         var generalpassfields = document.getElementById("passfields");
-        var generalpassbot = document.getElementById("passbotton");
+        var generalpassbot = document.getElementById("passbutton");
         var avatarform = document.getElementById("avatarform");
         var coverform = document.getElementById("coverform");
         var emailtab = document.getElementById("emailnoti");
+        var delectaccount = document.getElementById("pinc-delete-account");
+        delectaccount.classList.add('hider');
         generalpassfields.classList.add('hider');
         generalpassbot.classList.add('hider');
         generaltab.classList.add('hider');
@@ -588,10 +594,12 @@ get_header();
     function addemailnotitab() {
         var generaltab = document.getElementById("general");
         var generalpassfields = document.getElementById("passfields");
-        var generalpassbot = document.getElementById("passbotton");
+        var generalpassbot = document.getElementById("passbutton");
         var avatarform = document.getElementById("avatarform");
         var coverform = document.getElementById("coverform");
         var emailtab = document.getElementById("emailnoti");
+        var delectaccount = document.getElementById("pinc-delete-account");
+        delectaccount.classList.add('hider');
         generalpassfields.classList.add('hider');
         generalpassbot.classList.add('hider');
         generaltab.classList.add('hider');
