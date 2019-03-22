@@ -605,14 +605,14 @@ get_header();
 </script>
 <script>
 jQuery(document).ready(function($) {
-	$('#avatarform').css('top', $('#avatar-anchor').offset().top-120);
-	$('#coverform').css('top', $('#avatarform').offset().top+$('#avatarform').height()-70);
-	$('#avatar-anchor').css('margin-bottom', $('#avatarform').height()+$('#coverform').height()+30);
+	$('#avatarform').css('top', $('#avatar-anchor').offset().top+900);
+	$('#coverform').css('top', $('#avatarform').offset().top+$('#avatarform').height()+900);
+	$('#avatar-anchor').css('margin-bottom', $('#avatarform').height()+$('#coverform').height()+10);
 	
 	$(window).resize(function() {
 		$('#avatarform').css('top', $('#avatar-anchor').offset().top-105);
 		$('#coverform').css('top', $('#avatarform').offset().top+$('#avatarform').height()-70);
-		$('#avatar-anchor').css('margin-bottom', $('#avatarform').height()+$('#coverform').height()+30);
+		$('#avatar-anchor').css('margin-bottom', $('#avatarform').height()+$('#coverform').height()+10);
 	});
 });
 </script>
