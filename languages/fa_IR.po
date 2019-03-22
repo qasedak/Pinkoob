@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pinkoob\n"
 "POT-Creation-Date: 2019-03-22 21:32+0430\n"
-"PO-Revision-Date: 2019-03-22 21:34+0430\n"
+"PO-Revision-Date: 2019-03-22 21:45+0430\n"
 "Last-Translator: Mohammad Anbarestany <m_anbarestany@hotmail.com>\n"
 "Language-Team: \n"
 "Language: fa\n"
@@ -2404,7 +2404,7 @@ msgstr "گزارش تصویر"
 
 #: single-pin.php:706
 msgid "No color has been selected yet!"
-msgstr ""
+msgstr "هنوز رنگی برای این تصویر ثبت نشده!"
 
 #~ msgid "followers"
 #~ msgstr "دنبال کننده"

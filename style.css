@@ -3703,11 +3703,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     display: none !important;
 }
 .settingsTab{
-    border-bottom: 1px solid #cccccc3d;
-    font-size: 2em;
-    text-align: center;
-    padding-bottom: 0.6em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    width: 100%;   
+	font-family: "headings-font","IranSans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+  border-bottom: 1px solid #cccccc3d;
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 0.6em;
+  font-weight: 700;
+  margin-bottom: 20px;
+	width: 100%;   
 }
