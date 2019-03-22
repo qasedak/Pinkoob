@@ -3,7 +3,6 @@
 Template Name: _settings
 */
 if (!is_user_logged_in()) { wp_redirect(home_url('/login/?redirect_to=' . home_url('/settings/'))); exit; }
-
 //Let users who login thru facebook and twitter change their username
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'change_username_form') {
 	global $wpdb;
@@ -36,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'change_usern
 		exit;
 	}
 }
-
 //Save Settings
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'save_settings_form') {
 	if ($_GET['user'] && (current_user_can('administrator') || current_user_can('editor'))) {
@@ -46,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'save_setting
 		$user_info = get_userdata($user_ID);
 		$errors = pinc_edit_user($user_ID);
 	}
-
 	if ($_POST['pinc_user_location'] != $user_info->pinc_user_location)
 		update_user_meta($user_info->ID, 'pinc_user_location', sanitize_text_field($_POST['pinc_user_location']));
 	if ($_POST['pinc_user_facebook'] != $user_info->pinc_user_facebook)
@@ -67,10 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['form_name'] == 'save_setting
 		update_user_meta($user_info->ID, 'pinc_user_notify_follows', sanitize_text_field($_POST['pinc_user_notify_follows']));
 	if ($_POST['pinc_user_notify_comments'] != $user_info->pinc_user_notify_comments)
 		update_user_meta($user_info->ID, 'pinc_user_notify_comments', sanitize_text_field($_POST['pinc_user_notify_comments']));
-
 	$savesuccess = '1';
 }
-
 //function from wp-admin/includes/user.php
 function pinc_edit_user( $user_id = 0 ) {
 	global $wp_roles;
@@ -83,16 +78,13 @@ function pinc_edit_user( $user_id = 0 ) {
 	} else {
 		$update = false;
 	}
-
 	if ( !$update && isset( $_POST['user_login'] ) )
 		$user->user_login = sanitize_user($_POST['user_login'], true);
-
 	$pass1 = $pass2 = '';
 	if ( isset( $_POST['pass1'] ) )
 		$pass1 = $_POST['pass1'];
 	if ( isset( $_POST['pass2'] ) )
 		$pass2 = $_POST['pass2'];
-
 	if ( isset( $_POST['role'] ) && current_user_can( 'edit_users' ) ) {
 		$new_role = sanitize_text_field( $_POST['role'] );
 		$potential_role = isset($wp_roles->role_objects[$new_role]) ? $wp_roles->role_objects[$new_role] : false;
@@ -100,16 +92,13 @@ function pinc_edit_user( $user_id = 0 ) {
 		// Multisite super admins can freely edit their blog roles -- they possess all caps.
 		if ( ( is_multisite() && current_user_can( 'manage_sites' ) ) || $user_id != get_current_user_id() || ($potential_role && $potential_role->has_cap( 'edit_users' ) ) )
 			$user->role = $new_role;
-
 		// If the new role isn't editable by the logged-in user die with error
 		$editable_roles = get_editable_roles();
 		if ( ! empty( $new_role ) && empty( $editable_roles[$new_role] ) )
 			wp_die(__('You can&#8217;t give users that role.', 'pinc'));
 	}
-
 	//edited: store the original email
 	$original_user_email = $userdata->user_email;
-
 	if ( isset( $_POST['email'] ))
 		$user->user_email = sanitize_text_field( wp_unslash( $_POST['email'] ) );
 	if ( isset( $_POST['url'] ) ) {
@@ -129,33 +118,25 @@ function pinc_edit_user( $user_id = 0 ) {
 		$user->nickname = sanitize_text_field( $_POST['nickname'] );
 	if ( isset( $_POST['display_name'] ) )
 		$user->display_name = sanitize_text_field( $_POST['display_name'] );
-
 	if ( isset( $_POST['description'] ) )
 		$user->description = trim( $_POST['description'] );
-
 	foreach ( wp_get_user_contact_methods( $user ) as $method => $name ) {
 		if ( isset( $_POST[$method] ))
 			$user->$method = sanitize_text_field( $_POST[$method] );
 	}
-
 	if ( $update ) {
 		$user->rich_editing = isset( $_POST['rich_editing'] ) && 'false' == $_POST['rich_editing'] ? 'false' : 'true';
 		$user->admin_color = isset( $_POST['admin_color'] ) ? sanitize_text_field( $_POST['admin_color'] ) : 'fresh';
 		$user->show_admin_bar_front = isset( $_POST['admin_bar_front'] ) ? 'true' : 'false';
 	}
-
 	$user->comment_shortcuts = isset( $_POST['comment_shortcuts'] ) && 'true' == $_POST['comment_shortcuts'] ? 'true' : '';
-
 	$user->use_ssl = 0;
 	if ( !empty($_POST['use_ssl']) )
 		$user->use_ssl = 1;
-
 	$errors = new WP_Error();
-
 	/* checking that username has been typed */
 	if ( $user->user_login == '' )
 		$errors->add( 'user_login', __( '<strong>ERROR</strong>: Please enter a username.', 'pinc' ) );
-
 	/* checking the password has been typed twice */
 	/**
 	 * Fires before the password and confirm password fields are checked for congruity.
@@ -167,7 +148,6 @@ function pinc_edit_user( $user_id = 0 ) {
 	 * @param string &$pass2     The confirmed password, passed by reference.
 	 */
 	do_action_ref_array( 'check_passwords', array( $user->user_login, &$pass1, &$pass2 ) );
-
 	if ( $update ) {
 		if ( empty($pass1) && !empty($pass2) )
 			$errors->add( 'pass', __( '<strong>ERROR</strong>: You entered your new password only once.', 'pinc' ), array( 'form-field' => 'pass1' ) );
@@ -185,24 +165,18 @@ function pinc_edit_user( $user_id = 0 ) {
 		elseif ( empty($pass2) )
 			$errors->add( 'pass', __( '<strong>ERROR</strong>: Please enter your password twice.', 'pinc' ), array( 'form-field' => 'pass2' ) );
 	}
-
 	/* Check for "\" in password */
 	if ( false !== strpos( wp_unslash( $pass1 ), "\\" ) )
 		$errors->add( 'pass', __( '<strong>ERROR</strong>: Passwords may not contain the character "\\".', 'pinc' ), array( 'form-field' => 'pass1' ) );
-
 	/* checking the password has been typed twice the same */
 	if ( $pass1 != $pass2 )
 		$errors->add( 'pass', __( '<strong>ERROR</strong>: Please enter the same password in the two password fields.', 'pinc' ), array( 'form-field' => 'pass1' ) );
-
 	if ( !empty( $pass1 ) )
 		$user->user_pass = $pass1;
-
 	if ( !$update && isset( $_POST['user_login'] ) && !validate_username( $_POST['user_login'] ) )
 		$errors->add( 'user_login', __( '<strong>ERROR</strong>: This username is invalid because it uses illegal characters. Please enter a valid username.', 'pinc' ));
-
 	if ( !$update && username_exists( $user->user_login ) )
 		$errors->add( 'user_login', __( '<strong>ERROR</strong>: This username is already registered. Please choose another one.', 'pinc' ));
-
 	/* checking e-mail address */
 	$verify_new_email = $user_id; //edited: verify new email
 	if ( empty( $user->user_email ) ) {
@@ -215,22 +189,17 @@ function pinc_edit_user( $user_id = 0 ) {
 	} elseif ($userdata->user_email != $_POST['email'] && !current_user_can('administrator') && !current_user_can('editor'))  {
 		//store new email temporarily
 		update_user_meta($user_id, '_new_email', $user->user_email);
-
 		$new_email_key = wp_generate_password(20, false);
 		update_user_meta($user_id, '_new_email_key', $new_email_key);
 		
 		$blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
-
 		$message .= __('Please click the link to verify your email:', 'pinc') . "\r\n";
 		$message .= home_url('/settings/');
 		$message .= sprintf('?email=verify&login=%s&key=%s', rawurlencode($user->user_login), $new_email_key);
-
 		wp_mail($user->user_email, sprintf(__('[%s] Email Verification', 'pinc'), $blogname), $message);
-
 		$user->user_email = $original_user_email;
 		$verify_new_email = 'verify_new_email';
 	}
-
 	/**
 	 * Fires before user profile update errors are returned.
 	 *
@@ -241,10 +210,8 @@ function pinc_edit_user( $user_id = 0 ) {
 	 * @param WP_User &$user   WP_User object, passed by reference.
 	 */
 	do_action_ref_array( 'user_profile_update_errors', array( &$errors, $update, &$user ) );
-
 	if ( $errors->get_error_codes() )
 		return $errors;
-
 	if ( $update ) {
 		$user_id = wp_update_user( $user );
 	} else {
@@ -253,7 +220,6 @@ function pinc_edit_user( $user_id = 0 ) {
 	}
 	return $verify_new_email; //edited: verify new email
 }
-
 //check email verification
 if (isset($_GET['email']) && $_GET['email'] == 'verify') {
 	if ($_GET['user'] && (current_user_can('administrator') || current_user_can('editor')))
@@ -270,17 +236,13 @@ if (isset($_GET['email']) && $_GET['email'] == 'verify') {
 		$email_verified = 'no';
 	}
 }
-
 //retreive latest userinfo even after updating above
 if (isset($_GET['user']) && (current_user_can('administrator') || current_user_can('editor')))
 	$user_info = get_userdata($_GET['user']);
 else
 	$user_info = get_userdata($user_ID);
-
 if (!$user_info) wp_die(__('No Such User.', 'pinc'));
-
 if (user_can($user_info->ID, 'administrator') && !current_user_can('administrator')) wp_die(__('Administrator Profile: No Access', 'pinc'));
-
 get_header();
 ?>
 <div class="container">
@@ -292,7 +254,7 @@ get_header();
 			<?php $wsl_email_example = stripos($user_info->user_email, '@example.com'); if ($user_info->wsl_current_provider != '' && $wsl_email_example === false) { ?>
 			<div class="hider">
 			<?php } ?>
-				<h1><?php _e('Settings', 'pinc'); if (isset($_GET['user']) && (current_user_can('administrator') || current_user_can('editor'))) echo ' - ' . $user_info->user_login; ?></h1>
+				<a class="btn settingsTab" id="defaultOpen" onclick="addgeneraltab()"><?php _e('Account settings', 'pinc'); if (isset($_GET['user']) && (current_user_can('administrator') || current_user_can('editor'))) echo ' - ' . $user_info->user_login; ?></a>
 			<?php if ($user_info->wsl_current_provider != '' && $wsl_email_example === false) { ?>
 			</div>
 			<?php } ?>
@@ -346,34 +308,28 @@ get_header();
 				<?php if ($user_info->wsl_current_provider != '' && $wsl_email_example === false) { ?>
 				<div class="hider">
 				<?php } ?>
-					<div class="form-group">
+					<div id="general" class="form-group">
 						<label class="form-label" for="email"><?php _e('Email', 'pinc'); ?></label>
 						<input class="form-control" type="email" name="email" id="email" value="<?php echo esc_attr($user_info->user_email); ?>" tabindex="10" />
 						<?php if ($wsl_email_example !== false) { ?>
 							<p class="help-block"><?php echo __('Invalid email provided by', 'pinc') . ' ' . $user_info->wsl_current_provider . '. ' . __('Please enter a valid email to receive email notifications.', 'pinc'); ?></p>
 						<?php } ?>
 					</div>
-	
-					<?php if ($user_info->wsl_current_provider == '') { ?>
-						<div class="form-group">
-							<label class="form-label" for="pass1"><?php _e('Password', 'pinc') ?></label>
-							<input class="form-control" type="password" name="pass1" id="pass1" size="20" value="" autocomplete="off" tabindex="20" />
-						</div>
-	
-						<div class="form-group">					
-							<label class="form--label" for="pass2"><?php _e('Confirm Password', 'pinc') ?></label>
-							<input class="form-control" type="password" name="pass2" id="pass2" size="20" value="" autocomplete="off" tabindex="30" />
-							<p class="help-block"><?php _e('If you would like to change the password, type a new one. Otherwise leave them blank.', 'pinc'); ?></p>
-						</div>
-					<?php } ?>
+					
+                <?php if ($user_info->wsl_current_provider == '') { ?>
+                <input class="btn btn-success btn-sm" id="passbotton" type="button" value="<?php _e('Change password', 'pinc'); ?>" onclick="addRow()">
+                <div class="form-group" id="passfields"></div>
+                <?php } ?>
 
-					<br /><br />
 				<?php if ($user_info->wsl_current_provider != '' && $wsl_email_example === false) { ?>
 				</div>
-				<?php } ?>
-				<h1><?php _e('Profile', 'pinc'); ?><p></p><a class="btn btn-success btn-sm" href="<?php if ($_GET['user']) echo get_author_posts_url($_GET['user']); else echo get_author_posts_url($user_ID);  ?>" target="_blank"><strong><?php _e('See Your Public Profile', 'pinc'); ?></strong></a></h1>
 
+				<?php } ?>
+				<a class="btn settingsTab" onclick="addprofiletab()"><?php _e('Profile', 'pinc'); ?></a>
 				<br />
+				
+				<div id="profile" class="form-group">
+				    <a class="btn btn-success btn-sm" href="<?php if ($_GET['user']) echo get_author_posts_url($_GET['user']); else echo get_author_posts_url($user_ID);  ?>" target="_blank"><strong><?php _e('See Your Public Profile', 'pinc'); ?></strong></a>
 				<div class="form-group">
 					<label class="form-label" for="display_name"><?php _e('Display Name', 'pinc'); ?></label>
 					<input class="form-control" type="text" name="display_name" id="display_name" value="<?php echo esc_attr($user_info->display_name); ?>" tabindex="40" />
@@ -420,9 +376,10 @@ get_header();
 				</div>
 				
 				<span id="avatar-anchor"></span>
-				
+				</div>
 				<br />
-				<h1><?php _e('Email Notifications', 'pinc'); ?></h1>
+				<a class="btn settingsTab" onclick="addemailnotitab()"><?php _e('Email Notifications', 'pinc'); ?></a>
+				<div id="emailnoti" class="form-group">
 				<?php if ($wsl_email_example !== false) { ?>
 					<p>
 					<label><?php echo __('Invalid email provided by', 'pinc') . ' ' . $user_info->wsl_current_provider . '. ' . __('Please enter a valid email to receive email notifications.', 'pinc'); ?></label>
@@ -481,7 +438,7 @@ get_header();
 					<span class="onoffswitch-text"><?php _e('Notify when someone comments on my pin', 'pinc'); ?></span>
 					<div class="clearfix"></div>
 				</div>
-				
+				</div>
 				<br /><br />
 
 				<input type="hidden" name="user_login" id="user_login" value="<?php echo esc_attr($user_info->user_login); ?>" />
@@ -576,7 +533,76 @@ get_header();
 		</div>
 	</div>
 </div>
-
+<script>/* UX/UI Fix since 1.5.5*/
+    function addRow() {
+        var div = document.createElement('div');
+        div.className = 'form-group';
+        div.innerHTML =
+            '<div id="general" class="form-group">\
+                <label class="form-label" for="pass1"><?php _e('Password', 'pinc') ?></label>\
+                <input class="form-control" type="password" name="pass1" id="pass1" size="20" value="" autocomplete="off" tabindex="20" />\
+		    </div>\
+			<div id="general" class="form-group">\
+				<label class="form--label" for="pass2"><?php _e('Confirm Password', 'pinc') ?></label>\
+				<input class="form-control" type="password" name="pass2" id="pass2" size="20" value="" autocomplete="off" tabindex="30" />\
+				<p class="help-block"><?php _e('If you would like to change the password, type a new one.Otherwise leave them blank.', 'pinc'); ?></p>\
+            </div>';
+        document.getElementById('passfields').appendChild(div);
+        var bottonelem = document.getElementById("passbotton");
+        bottonelem.classList.add('hidden');
+    }
+    function addgeneraltab() {
+        var generaltab = document.getElementById("general");
+        var profiletab = document.getElementById("profile");
+        var generalpassfields = document.getElementById("passfields");
+        var generalpassbot = document.getElementById("passbotton");
+        var avatarform = document.getElementById("avatarform");
+        var coverform = document.getElementById("coverform");
+        var emailtab = document.getElementById("emailnoti");
+        generalpassfields.classList.remove('hider');
+        generaltab.classList.remove('hider');
+        profiletab.classList.add('hider');
+        avatarform.classList.add('hider');
+        coverform.classList.add('hider');
+        emailtab.classList.add('hider');
+        if (!generalpassbot.classList.contains("hidden")) {
+            generalpassbot.classList.remove('hider');
+        }
+    }
+    function addprofiletab() {
+        var generaltab = document.getElementById("general");
+        var generalpassfields = document.getElementById("passfields");
+        var generalpassbot = document.getElementById("passbotton");
+        var avatarform = document.getElementById("avatarform");
+        var coverform = document.getElementById("coverform");
+        var emailtab = document.getElementById("emailnoti");
+        generalpassfields.classList.add('hider');
+        generalpassbot.classList.add('hider');
+        generaltab.classList.add('hider');
+        avatarform.classList.remove('hider');
+        coverform.classList.remove('hider');
+        emailtab.classList.add('hider');
+        var profiletab = document.getElementById("profile");
+        profiletab.classList.remove('hider');
+    }
+    function addemailnotitab() {
+        var generaltab = document.getElementById("general");
+        var generalpassfields = document.getElementById("passfields");
+        var generalpassbot = document.getElementById("passbotton");
+        var avatarform = document.getElementById("avatarform");
+        var coverform = document.getElementById("coverform");
+        var emailtab = document.getElementById("emailnoti");
+        generalpassfields.classList.add('hider');
+        generalpassbot.classList.add('hider');
+        generaltab.classList.add('hider');
+        avatarform.classList.add('hider');
+        coverform.classList.add('hider');
+        emailtab.classList.remove('hider');
+        var profiletab = document.getElementById("profile");
+        profiletab.classList.add('hider');
+    }
+    document.getElementById("defaultOpen").click();
+</script>
 <script>
 jQuery(document).ready(function($) {
 	$('#avatarform').css('top', $('#avatar-anchor').offset().top-120);

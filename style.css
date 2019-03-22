@@ -2986,7 +2986,7 @@ background-color: #f89406 !important;
 
 	#topmenu .dropdown .dropdown-menu {
 	background: #f7f7f7;
-	right: 0;
+	left: 0;
 	position: relative;
 	top: 0;
 	}
@@ -3698,4 +3698,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 .fab, .fas{
 	vertical-align: middle;
+}
+.hidden{
+    display: none !important;
+}
+.settingsTab{
+    border-bottom: 1px solid #cccccc3d;
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 0.6em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 100%;   
 }
