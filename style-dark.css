@@ -60,6 +60,12 @@ color: #fff;
 background-color: #444;
 }
 
+@media (max-width: 1024px) {
+#topmenu {
+    background: #222 !important;
+}
+}
+
 #topmenu .dropdown-menu li a {
 color: #fff;
 }

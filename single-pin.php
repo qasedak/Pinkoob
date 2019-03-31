@@ -96,6 +96,11 @@
 										</span>
 										<?php } ?>
 
+										<?php setPostViews(get_the_ID()); ?>
+										<span class="post-action-button">
+											<a class="btn btn-success hidden-xs disabled" rel="tooltip" title="<?php echo getPostViews(get_the_ID()) .' '; _e('Views','pinc'); ?>" data-placement="bottom"><i class="fas fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?></a>
+										</span>
+
 										<div class="pinc-share btn-group post-action-button">
 											<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
 												<i class="fas fa-share-alt"></i> <span class="caret"></span>
@@ -123,10 +128,7 @@
 										</span>
 										<?php } ?>
 										
-										<?php
-                                            if (function_exists('exifography_display_exif'))
-                                                echo exifography_display_exif();
-                                        ?>
+										<?php if (function_exists('exifography_display_exif')) echo exifography_display_exif(); ?>
 
 										<span class="post-action-button">
 											<a class="post-report btn btn-success" rel="tooltip" title="<?php _e('Report', 'pinc'); ?>" data-placement="bottom"><i class="fas fa-flag fa-fw"></i></a>
