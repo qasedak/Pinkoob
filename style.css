@@ -298,7 +298,7 @@ background: #d9534f;
 
 #user-notifications-count + div.popover {
 background: #fcfcfc;
-right: -272px !important;
+right: -245px !important;
 max-width: 440px;
 top: 40px !important;
 width: 440px;
@@ -3711,4 +3711,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 700;
   margin-bottom: 20px;
 	width: 100%;   
+}
+#register_agree {
+    float: right !important;
+}
+.usercp-wrapper #register_agree_msg {
+    margin: -3px 32px 0 0;
 }
