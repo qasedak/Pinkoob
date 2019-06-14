@@ -339,7 +339,7 @@ get_header();
 					</p>
 	
 					<?php if (of_get_option('register_agree') != '0') { ?>
-						<i id="register_agree" class="fas fa-square-o fa-fw fa-lg pull-left"></i>
+						<i id="register_agree" class="far fa-square fa-fw fa-lg pull-left"></i>
 						<div id="register_agree_msg">
 							<?php _e('I Agree To The', 'pinc'); ?>
 							<a onClick="window.open('<?php echo get_permalink(of_get_option('register_agree')); ?>','','resizable=1,scrollbars=1,top=0,left=0,width=640,height=480'); return false;" href="<?php echo get_permalink(of_get_option('register_agree')); ?>" target="_blank">
@@ -376,11 +376,11 @@ jQuery(document).ready(function($) {
 	$(document).on('touchstart click', '#register_agree', function(event) {
 		event.stopPropagation();
         event.preventDefault();
-		if ($('#register_agree').hasClass('fa-check-square-o')) {
-			$(this).removeClass('fa-check-square-o').addClass('fa-square-o');
+		if ($('#register_agree').hasClass('fa-check-square')) {
+			$(this).removeClass('fa-check-square').addClass('fa-square');
 			$('#wp-submit').attr('disabled', 'disabled');
 		} else {
-			$(this).removeClass('fa-square-o').addClass('fa-check-square-o');
+			$(this).removeClass('fa-square').addClass('fa-check-square');
 			$('#wp-submit').removeAttr('disabled');
 		}
 	});
