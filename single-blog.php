@@ -75,7 +75,29 @@
 							<div class="post-comments-wrapper">
 								<?php comments_template(); ?>
 								<?php if (of_get_option('facebook_comments') != 'disable' && comments_open()) { ?>
-								<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-num-posts="5"<?php /* Auto Color by macse */ $currentTime = current_time('timestamp'); if(of_get_option("theme_color_mod") == 2){if ($currentTime > strtotime(of_get_option("night_start")) || $currentTime < strtotime(of_get_option("night_end"))) {$colorScheme = 'dark';}else{$colorScheme = 'light';}}elseif(of_get_option("theme_color_mod") == 0){$colorScheme = 'light';}else{$colorScheme = 'dark';} if ($colorScheme == 'dark') { echo ' data-colorscheme="dark"'; } ?> data-width="100%"></div>
+								<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-num-posts="5"<?php /* Auto Color by macse */
+									if(of_get_option("theme_color_mod") == 2){
+										global $user_ID;
+										$user_info = get_userdata($user_ID);
+										if(!empty($user_info->pinc_user_timezone)){
+											$timeZoneSet = $user_info->pinc_user_timezone;
+										}else{
+											$timeZoneSet = get_option('timezone_string');
+										}
+										$getUserDate = new DateTime(null, new DateTimeZone($timeZoneSet));
+										$currentTime = $getUserDate->format('H:i:s');
+									
+										if ($currentTime > of_get_option("night_start") || $currentTime < of_get_option("night_end")) {
+											$colorScheme = 'dark';
+										}else{
+											$colorScheme = 'light';
+										}
+									}elseif(of_get_option("theme_color_mod") == 0){
+										$colorScheme = 'light';
+									}else{
+										$colorScheme = 'dark';
+									}
+								if ($colorScheme == 'dark') { echo ' data-colorscheme="dark"'; } ?> data-width="100%"></div>
 								<?php } ?>
 							</div>
 						</div>

@@ -55,7 +55,31 @@
 	fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<?php } ?>
-	<?php $header = of_get_option('header'); ?>	<nav id="topmenu" class="navbar<?php /* Auto Color by macse */ $currentTime = current_time('timestamp'); if(of_get_option("theme_color_mod") == 2){if ($currentTime > strtotime(of_get_option("night_start")) || $currentTime < strtotime(of_get_option("night_end"))) {$colorScheme = 'dark';}else{$colorScheme = 'light';}}elseif(of_get_option("theme_color_mod") == 0){$colorScheme = 'light';}else{$colorScheme = 'dark';} if ($colorScheme == 'dark') echo ' navbar-inverse'; else echo ' navbar-default' ?> navbar-fixed-top" style="background-image: url('<?php echo $header ?>'); background-repeat: repeat;">
+	<?php $header = of_get_option('header'); ?>	<nav id="topmenu" class="navbar
+	<?php /* Auto Color by macse */ 
+     if(of_get_option("theme_color_mod") == 2){
+        global $user_ID;
+        $user_info = get_userdata($user_ID);
+        if(!empty($user_info->pinc_user_timezone)){
+            $timeZoneSet = $user_info->pinc_user_timezone;
+        }else{
+            $timeZoneSet = get_option('timezone_string');
+        }
+        $getUserDate = new DateTime(null, new DateTimeZone($timeZoneSet));
+        $currentTime = $getUserDate->format('H:i:s');
+    
+        if ($currentTime > of_get_option("night_start") || $currentTime < of_get_option("night_end")) {
+            $colorScheme = 'dark';
+        }else{
+            $colorScheme = 'light';
+        }
+    }elseif(of_get_option("theme_color_mod") == 0){
+        $colorScheme = 'light';
+    }else{
+        $colorScheme = 'dark';
+    }
+	if ($colorScheme == 'dark') echo ' navbar-inverse'; else echo ' navbar-default' ?>
+	 navbar-fixed-top" style="background-image: url('<?php echo $header ?>'); background-repeat: repeat;">
 		<div class="container widthFix">
 			<div id="top-menu-right-mobile" class="visible-xs">
 			<?php if ($user_ID) { ?>

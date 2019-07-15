@@ -434,9 +434,18 @@ function pinc_top_user_by_pins($user_id)
 }
 /* day or night logo? - macse */
 global $logo;
-     if(of_get_option("theme_color_mod") == 2){
+global $user_ID;
+    $user_info = get_userdata($user_ID);
+    if(!empty($user_info->pinc_user_timezone)){
+        $timeZoneSet = $user_info->pinc_user_timezone;
+    }else{
+        $timeZoneSet = get_option('timezone_string');
+    }
+    $getUserDate = new DateTime(null, new DateTimeZone($timeZoneSet));
+    $currentTime = $getUserDate->format('H:i:s');
+    if(of_get_option("theme_color_mod") == 2){
         $currentTime = current_time('timestamp');
-        if ($currentTime > strtotime(of_get_option("night_start")) || $currentTime < strtotime(of_get_option("night_end"))) {
+        if ($currentTime > of_get_option("night_start") || $currentTime < of_get_option("night_end")) {
             $logo = of_get_option('logo_night');
         }else{
             $logo = of_get_option('logo');
@@ -1595,9 +1604,18 @@ function pinc_enqueue_scripts()
     wp_enqueue_style("wp-mediaelement");
     wp_enqueue_script("wp-mediaelement");
      /* Auto Color by macse */
-    if(of_get_option("theme_color_mod") == 2){
-        $currentTime = current_time('timestamp');
-        if ($currentTime > strtotime(of_get_option("night_start")) || $currentTime < strtotime(of_get_option("night_end"))) {
+     if(of_get_option("theme_color_mod") == 2){
+        global $user_ID;
+        $user_info = get_userdata($user_ID);
+        if(!empty($user_info->pinc_user_timezone)){
+            $timeZoneSet = $user_info->pinc_user_timezone;
+        }else{
+            $timeZoneSet = get_option('timezone_string');
+        }
+        $getUserDate = new DateTime(null, new DateTimeZone($timeZoneSet));
+        $currentTime = $getUserDate->format('H:i:s');
+    
+        if ($currentTime > of_get_option("night_start") || $currentTime < of_get_option("night_end")) {
             $colorScheme = 'dark';
         }else{
             $colorScheme = 'light';
