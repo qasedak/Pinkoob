@@ -2,7 +2,7 @@
 /*
     Our website:  http://qasedakgp.ir
     By Mohammad Anbarestany
-    Qasedak Group - 2017-2018
+    Qasedak Group - 2017-2019
 */
 
 // View count Func
@@ -431,32 +431,6 @@ function pinc_top_user_by_pins($user_id)
     return false;
 }
 
-}
-/* day or night logo? - macse */
-global $logo;
-global $user_ID;
-    $user_info = get_userdata($user_ID);
-    if(!empty($user_info->pinc_user_timezone)){
-        $timeZoneSet = $user_info->pinc_user_timezone;
-    }else{
-        $timeZoneSet = get_option('timezone_string');
-    }
-    $getUserDate = new DateTime(null, new DateTimeZone($timeZoneSet));
-    $currentTime = $getUserDate->format('H:i:s');
-    if(of_get_option("theme_color_mod") == 2){
-        $currentTime = current_time('timestamp');
-        if ($currentTime > of_get_option("night_start") || $currentTime < of_get_option("night_end")) {
-            $logo = of_get_option('logo_night');
-        }else{
-            $logo = of_get_option('logo');
-        }
-    }elseif(of_get_option("theme_color_mod") == 0){
-        $logo = of_get_option('logo');
-    }else{
-        $logo = of_get_option('logo_night');
-    }
-function logoDN() {
-    return $logo;
 }
 
 /* Color and fonts Style Generator */
@@ -1605,6 +1579,7 @@ function pinc_enqueue_scripts()
     wp_enqueue_script("wp-mediaelement");
      /* Auto Color by macse */
      if(of_get_option("theme_color_mod") == 2){
+        global $logo;
         global $user_ID;
         $user_info = get_userdata($user_ID);
         if(!empty($user_info->pinc_user_timezone)){
@@ -1614,16 +1589,19 @@ function pinc_enqueue_scripts()
         }
         $getUserDate = new DateTime(null, new DateTimeZone($timeZoneSet));
         $currentTime = $getUserDate->format('H:i:s');
-    
         if ($currentTime > of_get_option("night_start") || $currentTime < of_get_option("night_end")) {
             $colorScheme = 'dark';
+            $logo = of_get_option('logo_night');
         }else{
             $colorScheme = 'light';
+            $logo = of_get_option('logo');
         }
     }elseif(of_get_option("theme_color_mod") == 0){
         $colorScheme = 'light';
+        $logo = of_get_option('logo');
     }else{
         $colorScheme = 'dark';
+        $logo = of_get_option('logo_night');
     }
     if( $colorScheme == "dark" ) 
     {
@@ -1720,6 +1698,9 @@ function pinc_enqueue_scripts()
 
     $translation_array = array( "__postcommenttimenow" => __("Now", "pinc"), "__allitemsloaded" => __("All items loaded", "pinc"), "__addanotherpin" => __("Add Another Pin", "pinc"), "__addnewboard" => __("Add new board...", "pinc"), "__boardalreadyexists" => __("Board already exists. Please try another title.", "pinc"), "__errorpleasetryagain" => __("Error. Please try again.", "pinc"), "__cancel" => __("Cancel", "pinc"), "__close" => __("Close", "pinc"), "__comment" => __("comment", "pinc"), "__comments" => __("comments", "pinc"), "__enternewboardtitle" => __("Enter new board title", "pinc"), "__Follow" => __("Follow", "pinc"), "__FollowBoard" => __("Follow Board", "pinc"), "__Forgot" => __("Forgot?", "pinc"), "__imagetoosmall" => sprintf(__("Image is too small (min size: %d x %dpx)", "pinc"), $minWidth, $minHeight), "__incorrectusernamepassword" => __("Incorrect Username/Password", "pinc"), "__mixedmimetypes" => __("Mixing video and image files is not allowed.", "pinc"), "__multipelvideos" => __("Multiple video upload is not allowed.", "pinc"), "__invalidimagefile" => __("Invalid media file. Please choose a JPG/GIF/PNG/MP4/OGG/WEBM file.", "pinc"), "__Likes" => __("Likes", "pinc"), "__loading" => __("Loading...", "pinc"), "__Login" => __("Login", "pinc"), "__NotificationsLatest30" => __("Notifications (Latest 30)", "pinc"), "__onto" => __("onto", "pinc"), "__Pleasecreateanewboard" => __("Please create a new board", "pinc"), "__Pleaseentertitle" => __("Please enter title", "pinc"), "__Pleaseloginorregisterhere" => __("Please login or register here", "pinc"), "__Pleasetypeacomment" => __("Please type a comment", "pinc"), "__or" => __("or", "pinc"), "__Password" => __("Password", "pinc"), "__pinnedto" => __("Pinned to", "pinc"), "__pleaseenterbothusernameandpassword" => __("Please enter both username and password.", "pinc"), "__pleaseenterurl" => __("Please enter url", "pinc"), "__Repin" => __("Repin", "pinc"), "__Repins" => __("Repins", "pinc"), "__repinnedto" => __("Repinned to", "pinc"), "__seethispin" => __("See This Pin", "pinc"), "__SeeAll" => __("See All", "pinc"), "__shareitwithyourfriends" => __("Share it with your friends", "pinc"), "__SignUp" => __("Sign Up", "pinc"), "__sorryunbaletofindanypinnableitems" => __("Sorry, unable to find any pinnable items.", "pinc"), "__Unfollow" => __("Unfollow", "pinc"), "__UnfollowBoard" => __("Unfollow Board", "pinc"), "__Username" => __("Username or Email", "pinc"), "__Video" => __("Video", "pinc"), "__Welcome" => __("Welcome", "pinc"), "__yourpinispendingreview" => __("Your pin is pending review", "pinc"), "__LoginForm" => __("</span></a>", "pinc"), "ajaxurl" => admin_url("admin-ajax.php"), "avatar30" => get_avatar($current_user->ID, "30"), "avatar48" => get_avatar($current_user->ID, "48"), "blogname" => get_bloginfo("name"), "categories" => $dropdown_categories, "current_date" => date("j M Y g:ia", current_time("timestamp")), "description_fields" => $description_fields, "home_url" => home_url(), "infinitescroll" => of_get_option("infinitescroll"), "lightbox" => of_get_option("lightbox"), "login_url" => wp_login_url($_SERVER["REQUEST_URI"]), "nextselector" => $nextSelector, "nonce" => wp_create_nonce("ajax-nonce"), "price_html" => $price_html, "site_url" => site_url(), "stylesheet_directory_uri" => get_template_directory_uri(), "stylesheet_directory_uri_child" => get_stylesheet_directory_uri(), "tags_html" => $tags_html, "u" => $current_user->ID, "ui" => $current_user->display_name, "ul" => $current_user->user_nicename, "user_rewrite" => $wp_rewrite->author_base );
     wp_localize_script("pinc_custom", "obj_pinc", $translation_array);
+}
+function logoDN() {
+    return $logo;
 }
 
 function pinc_style_loader_src($src)
