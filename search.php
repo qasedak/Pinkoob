@@ -43,7 +43,7 @@
 			)
 		);
 		
-		if ($boards_count > 0) {
+		if ($boards_count > 0 && get_search_query() != "") {
 		?>
 		<div id="user-profile-boards">
 		<?php	
@@ -231,7 +231,7 @@
 		$maxpage = ceil($search_user_query->total_users/get_option('posts_per_page'));
 		$user_info = get_user_by('id', $user_ID);
 	
-		if ($search_user_query->total_users > 0) {
+		if ($search_user_query->total_users > 0 && get_search_query() != "") {
 			echo '<div id="user-profile-follow" class="row">';
 			foreach ($search_user_query->results as $search_user) {
 				?>
@@ -343,7 +343,7 @@
 	
 		$search_tags = get_tags($args);
 
-		if (!empty($search_tags)) {
+		if (!empty($search_tags) && get_search_query() != "") {
 			echo '<div id="search-tags" class="row">';
 	
 			foreach ($search_tags as $tag) {
@@ -520,8 +520,16 @@
 		if ($orderby == 'meta_value_num')
 			remove_filter('posts_orderby', 'pinc_meta_value_num_orderby');
 		
-		get_template_part('index', 'masonry');
-
+		if(get_search_query() != ""){
+		    get_template_part('index', 'masonry');
+		}else{ ?>
+		    <div class="row">
+				<div class="bigmsg">
+					<h2><?php _e('Nothing yet.', 'pinc'); ?></h2>
+				</div>
+			</div>
+		</div>
+		<?php }
 
 	} else { //default search for pins
 		?>
@@ -671,13 +679,23 @@
 				remove_filter('posts_orderby', 'pinc_comments_orderby');
 		}
 	
-		get_template_part('index', 'masonry');
+		if(get_search_query() != ""){
+		    get_template_part('index', 'masonry');
+		}else{ ?>
+		    <div class="row">
+				<div class="bigmsg">
+					<h2><?php _e('Nothing yet.', 'pinc'); ?></h2>
+				</div>
+			</div>
+		</div>
+		<?php }
 	}
 	?>
 
 	<?php
 	function get_items_count($type = 'pin') {
 		global $wpdb, $user_ID;
+		if (get_search_query() != ""){
 		if ($type == 'board') {
 			$boards_count = $wpdb->get_var($wpdb->prepare(
 				"SELECT COUNT($wpdb->terms.term_id)
@@ -937,6 +955,9 @@
 			
 			$pin_query = new WP_Query($args);
 			return $pin_query->found_posts;
+		}
+		}else{
+		    return 0;
 		}
 	}
 	?>

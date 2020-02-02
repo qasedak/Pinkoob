@@ -223,7 +223,7 @@
 	<?php if (is_search() || is_category() || is_tag()) { ?>
 	<div class="container subpage-title">
 		<?php if (is_search()) { ?>
-			<h1><?php _e('Search results for', 'pinc'); ?> "<?php the_search_query(); ?>"</h1>
+			<h1><?php if( get_search_query() != "") { _e('Search results for', 'pinc'); echo' "'; the_search_query(); echo'"';} else { _e('Search query should not be empty!', 'pinc');} ?></h1>
 		<?php } else if (is_category()) { ?>
 			<h1<?php if (in_category(pinc_blog_cats())) echo ' style="text-align:left;"'; ?>><?php single_cat_title(); ?></h1>
 			<?php if (category_description()) { ?>
