@@ -79,7 +79,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<?php global $logo; logoDN(); ?>
+				<?php global $logo; ?>
 				<a class="navbar-brand<?php if ($logo != '') { echo ' logo'; } ?>" href="<?php echo home_url('/'); ?>">
 				<?php if ($logo != '') { ?>
 					<img src="<?php echo $logo ?>" alt="Logo" />

@@ -56,28 +56,7 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<?php } ?>
 	<?php $header = of_get_option('header'); ?>	<nav id="topmenu" class="navbar
-	<?php /* Auto Color by macse */ 
-     if(of_get_option("theme_color_mod") == 2){
-        global $user_ID;
-        $user_info = get_userdata($user_ID);
-        if(!empty($user_info->pinc_user_timezone)){
-            $timeZoneSet = $user_info->pinc_user_timezone;
-        }else{
-            $timeZoneSet = get_option('timezone_string');
-        }
-        $getUserDate = new DateTime(null, new DateTimeZone($timeZoneSet));
-        $currentTime = $getUserDate->format('H:i:s');
-    
-        if ($currentTime > of_get_option("night_start") || $currentTime < of_get_option("night_end")) {
-            $colorScheme = 'dark';
-        }else{
-            $colorScheme = 'light';
-        }
-    }elseif(of_get_option("theme_color_mod") == 0){
-        $colorScheme = 'light';
-    }else{
-        $colorScheme = 'dark';
-    }
+	<?php /* Auto Color by macse */ global $colorScheme;
 	if ($colorScheme == 'dark') echo ' navbar-inverse'; else echo ' navbar-default' ?>
 	 navbar-fixed-top" style="background-image: url('<?php echo $header ?>'); background-repeat: repeat;">
 		<div class="container widthFix">
@@ -103,7 +82,7 @@
 					<span class="icon-bar"></span>
 				</button>
 
-				<?php global $logo; logoDN(); ?>
+				<?php global $logo; ?>
 				<a class="navbar-brand<?php if ($logo != '') { echo ' logo'; } ?>" href="<?php echo home_url('/'); ?>">
 				<?php if ($logo != '') { ?>
 					<img src="<?php echo $logo ?>" alt="Logo" />
