@@ -38,7 +38,11 @@ function wpb_tag_cloud() {
     /* use post id to change the image of the day */
     if ( function_exists( 'add_theme_support' ) ) {
         add_theme_support( 'post-thumbnails' );
-        add_image_size( 'daily-thumbs', 2000, 1024 ); 
+        add_image_size( 'daily-thumbs', 2000, 1024 );
+        //download size options
+        add_image_size( 'small-size-dl', 640 );
+        add_image_size( 'medium-size-dl', 1920 );
+        add_image_size( 'large-size-dl', 2400 );
     }
     function dailyImage($id) { 
         if($id == "rnd"){

@@ -52,6 +52,11 @@
 						// Full Sized Image var by macse
 						// used for download link and zoom
 						$originalImageSize = wp_get_attachment_image_src(get_post_thumbnail_id($original_post_id), 'full');
+						//Download size options
+						$dlSmall = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'small-size-dl');
+						$dlMedium = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'medium-size-dl');
+						$dlLarge = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'large-size-dl');
+
 
 						if ($imgsrc[0][0] == '') {
 							$imgsrc[0][0] = get_template_directory_uri() . '/img/blank.gif';
@@ -110,7 +115,6 @@
 												<li><a href="" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php echo rawurlencode(get_permalink()); ?>', 'facebook-share-dialog', 'width=626,height=500'); return false;"><i class="fab fa-facebook-square fa-lg fa-fw text-info"></i> <?php _e('Share on Facebook', 'pinc'); ?></a></li>
 												<li><a href="" onclick="window.open('https://twitter.com/share?url=<?php the_permalink(); ?>&amp;text=<?php echo rawurlencode(get_the_title()); ?>', 'twitter-share-dialog', 'width=626,height=500'); return false;"><i class="fab fa-twitter-square fa-lg fa-fw text-primary"></i> <?php _e('Share on Twitter', 'pinc'); ?></a></li>
 												<li><a href="" onclick="window.open('http://www.reddit.com/submit?url=<?php echo rawurlencode(get_permalink()); ?>&amp;title=<?php echo rawurlencode(get_the_title()); ?>', 'reddit-share-dialog', 'width=880,height=500,scrollbars=1'); return false;"><i class="fab fa-reddit-square fa-lg fa-fw text-primary"></i> <?php _e('Share on Reddit', 'pinc'); ?></a></li>
-												<li><a href="" onclick="window.open('https://plus.google.com/share?url=<?php the_permalink(); ?>', 'gplus-share-dialog', 'width=626,height=500'); return false;"><i class="fab fa-google-plus-square fa-lg fa-fw text-danger"></i> <?php _e('Share on Google+', 'pinc'); ?></a></li>
 												<li><a href="" onclick="window.open('http://pinterest.com/pin/create/button/?url=<?php echo rawurlencode(get_permalink()); ?>&amp;media=<?php echo rawurlencode($imgsrc[0][0]); ?>&amp;description=<?php the_title_attribute(); ?>', 'pinterest-share-dialog', 'width=626,height=500'); return false;"><i class="fab fa-pinterest-square fa-lg fa-fw text-danger"></i> <?php _e('Share on Pinterest', 'pinc'); ?></a></li>
 												<li><a href="" class="post-embed"><i class="fas fa-code fa-lg fa-fw"></i> <?php _e('Embed', 'pinc'); ?></a></li>
 											</ul>
@@ -123,9 +127,18 @@
 										<?php } ?>
 
 										<?php if (!$post_video) { ?>
-										<span class="post-action-button">
-											<a download class="btn btn-success hidden-xs" href="<?php echo $originalImageSize[0]; ?>" rel="tooltip" title="<?php _e('Download','pinc'); ?>" data-placement="bottom"><i class="fas fa-download fa-fw"></i></a>
-										</span>
+										<div class="pinc-share btn-group post-action-button">
+											<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+												<i class="fas fa-download fa-fw"></i> <span class="caret"></span>
+											</button>
+
+											<ul class="dropdown-menu <?php if(is_rtl()){echo "pull-right";} ?>">
+												<li><a download href="<?php echo $originalImageSize[0]; ?>"><?php _e('Original ','pinc'); echo  '('.$originalImageSize[1] .'x'. $originalImageSize[2].')'; ?></a></li>
+												<li><a download href="<?php echo $dlSmall[0]; ?>"><?php _e('Small ','pinc'); echo  '('.$dlSmall[1] .'x'. $dlSmall[2].')'; ?></a></li>
+												<li><a download href="<?php echo $dlMedium[0]; ?>"><?php _e('Medium ','pinc'); echo  '('.$dlMedium[1] .'x'. $dlMedium[2].')'; ?></a></li>
+												<li><a download href="<?php echo $dlLarge[0]; ?>"><?php _e('Large ','pinc'); echo  '('.$dlLarge[1] .'x'. $dlLarge[2].')'; ?></a></li>
+											</ul>
+										</div>
 										<?php } ?>
 										
 										<?php if (function_exists('exifography_display_exif')) echo exifography_display_exif(); ?>
