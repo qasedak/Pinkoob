@@ -4057,7 +4057,7 @@ function pinc_setup()
 
 function pinc_admin_notices()
 {
-    echo "<div class=\"error fade\"><p><strong>[Important Notice] <img width=\"20\" src=\"https://pinkoob.com/wp-content/themes/pinnew/favicon.png\"> Click <a href=\"" . admin_url("themes.php?page=theme_installation") . "\">" . "HERE</a> to complete the necessary installation steps required for Pinkoob to run smoothly." . "</strong></div>";
+    echo "<div class=\"error fade\"><p><strong>[Important Notice] <img width=\"20\" src=\"http://skilledup.ir/pinkoob.png\"> Click <a href=\"" . admin_url("themes.php?page=theme_installation") . "\">" . "HERE</a> to complete the necessary installation steps required for Pinkoob to run smoothly." . "</strong></div>";
 }
 
 function pinc_setup_guide()
@@ -4171,7 +4171,7 @@ function pinc_setup_guide_page()
     echo admin_url("options-permalink.php");
     echo "\" target=\"_blank\">Settings > Permalinks</a> and simply click \"Save Changes\" once again. It should display your profile.</li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t\t<hr style=\"border:none;border-top:1px solid #ccc;color\" /><br><br>\n\t\t\t<li>\n\t\t\t\tEdit <strong>wp-config.php</strong>\n\t\t\t\t<ul>\n\t\t\t\t\t<li>Open wp-config.php file for editing (from Wordpress root directory) and search for: <strong><em>define('WP_DEBUG', false);</em></strong><br><br>Below this line, add the following line:<br><br> <em><strong>define('EMPTY_TRASH_DAYS', 0);</strong></em></li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t\t<hr style=\"border:none;border-top:1px solid #ccc;color\" /><br><br>\n\t\t\t<li>\n\t\t\t\tInstall <strong>WP Social Login</strong> plugin (optional - for Social Media login)\n\t\t\t\t<ul>\n\t\t\t\t\t<li>See <a href=\"";
     echo admin_url("themes.php?page=pinc#options-group-3");
-    echo "\" target=\"_blank\">F.A.Q</a> section, under \"Recommended Plugins\" on how to do it</li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t\t<hr style=\"border:none;border-top:1px solid #ccc;color\" /><br><br>\n\n\t\t\t\t<font color=\"#428bca\" size=\"3\"><br><br><strong><u><img width=\"40\" src=\"https://pinkoob.com/wp-content/themes/pinnew/favicon.png\">Enjoy Pinkoob</u>!</font><br><br>Or continue below to setup a sideblog, optionally.</strong><br><br><br>\n\n\t\t\t<br><br><br>\n\t\t\t<li>\n\t\t\t\tVisit <strong><a href=\"";
+    echo "\" target=\"_blank\">F.A.Q</a> section, under \"Recommended Plugins\" on how to do it</li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t\t<hr style=\"border:none;border-top:1px solid #ccc;color\" /><br><br>\n\n\t\t\t\t<font color=\"#428bca\" size=\"3\"><br><br><strong><u><img width=\"40\" src=\"http://skilledup.ir/pinkoob.png\">Enjoy Pinkoob</u>!</font><br><br>Or continue below to setup a sideblog, optionally.</strong><br><br><br>\n\n\t\t\t<br><br><br>\n\t\t\t<li>\n\t\t\t\tVisit <strong><a href=\"";
     echo admin_url("edit-tags.php?taxonomy=category");
     echo "\" target=\"_blank\">Posts > Categories</a></strong>\n\t\t\t\t<ul>\n\t\t\t\t\t<li>Add a new category, e.g <strong>Blog</strong></li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t\t<hr style=\"border:none;border-top:1px solid #ccc;color\" /><br><br>\n\t\t\t<li>\n\t\t\t\tVisit <strong><a href=\"";
     echo admin_url("themes.php?page=pinc");
