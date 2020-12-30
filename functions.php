@@ -1589,8 +1589,10 @@ function pinc_enqueue_scripts()
         $user_info = get_userdata($user_ID);
         if(!empty($user_info->pinc_user_timezone)){
             $timeZoneSet = $user_info->pinc_user_timezone;
-        }else{
+        }else if (!empty(get_option('timezone_string'))){
             $timeZoneSet = get_option('timezone_string');
+        }else {
+            $timeZoneSet = "Etc/Greenwich";
         }
         $getUserDate = new DateTime(null, new DateTimeZone($timeZoneSet));
         $currentTime = $getUserDate->format('H:i:s');

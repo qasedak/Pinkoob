@@ -356,8 +356,13 @@ get_header();
 
 				<div class="form-group">
 					<label class="form-label" for="pinc_user_timezone"><?php _e('your time zone', 'pinc'); ?></label>
+					<?php
+					$apiTZ ="http://ip-api.com/json/{$_SERVER['REMOTE_ADDR']}?fields=timezone";
+					$userTZstr = json_decode(file_get_contents($apiTZ),1)["timezone"];
+					$userCurrentTZ = esc_attr($user_info->pinc_user_timezone);
+					?>
 					<select class="form-control" type="text" name="pinc_user_timezone" id="pinc_user_timezone" value="<?php echo esc_attr($user_info->pinc_user_timezone); ?>">
-						<option value="<?php echo esc_attr($user_info->pinc_user_timezone); ?>" selected="selected"><?php echo esc_attr($user_info->pinc_user_timezone); ?></option>
+						<option value="<?php if (!isset($userCurrentTZ)){ echo $userTZstr; } else { echo esc_attr($user_info->pinc_user_timezone); } ?>" selected="selected"><?php if (!isset($userCurrentTZ)){ echo $userTZstr; } else { echo esc_attr($user_info->pinc_user_timezone); }  ?></option>
 						<option value="Pacific/Midway">(UTC-11:00) Midway Island</option>
 				        <option value="Pacific/Samoa">(UTC-11:00) Samoa</option>
 				        <option value="Pacific/Honolulu">(UTC-10:00) Hawaii</option>
