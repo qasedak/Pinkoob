@@ -4030,18 +4030,34 @@ function pinc_setup()
 
         }
         // predefined colors
-        wp_insert_term('آبی','color',array('slug' => 'blue',));
-        wp_insert_term('قرمز','color',array('slug' => 'red',));
-        wp_insert_term('بنفش','color',array('slug' => 'violet',));
-        wp_insert_term('خاکستری','color',array('slug' => 'gray',));
-        wp_insert_term('زرد','color',array('slug' => 'yellow',));
-        wp_insert_term('سبز','color',array('slug' => 'green',));
-        wp_insert_term('سفید','color',array('slug' => 'white',));
-        wp_insert_term('سیاه','color',array('slug' => 'black',));
-        wp_insert_term('صورتی','color',array('slug' => 'pink',));
-        wp_insert_term('نارنجی','color',array('slug' => 'orange',));
-        wp_insert_term('قهوه ای','color',array('slug' => 'brown',));
-        wp_insert_term('کرم','color',array('slug' => 'Moccasin',));
+        if (get_locale() == 'fa_IR') {
+            wp_insert_term('آبی', 'color', array('slug' => 'blue',));
+            wp_insert_term('قرمز', 'color', array('slug' => 'red',));
+            wp_insert_term('بنفش', 'color', array('slug' => 'violet',));
+            wp_insert_term('خاکستری', 'color', array('slug' => 'gray',));
+            wp_insert_term('زرد', 'color', array('slug' => 'yellow',));
+            wp_insert_term('سبز', 'color', array('slug' => 'green',));
+            wp_insert_term('سفید', 'color', array('slug' => 'white',));
+            wp_insert_term('سیاه', 'color', array('slug' => 'black',));
+            wp_insert_term('صورتی', 'color', array('slug' => 'pink',));
+            wp_insert_term('نارنجی', 'color', array('slug' => 'orange',));
+            wp_insert_term('قهوه ای', 'color', array('slug' => 'brown',));
+            wp_insert_term('کرم', 'color', array('slug' => 'moccasin',));
+        } else {
+            wp_insert_term('Blue', 'color', array('slug' => 'blue',));
+            wp_insert_term('Red', 'color', array('slug' => 'red',));
+            wp_insert_term('Violet', 'color', array('slug' => 'violet',));
+            wp_insert_term('Gray', 'color', array('slug' => 'gray',));
+            wp_insert_term('Yellow', 'color', array('slug' => 'yellow',));
+            wp_insert_term('Green', 'color', array('slug' => 'green',));
+            wp_insert_term('White', 'color', array('slug' => 'white',));
+            wp_insert_term('Black', 'color', array('slug' => 'black',));
+            wp_insert_term('Pink', 'color', array('slug' => 'pink',));
+            wp_insert_term('Orange', 'color', array('slug' => 'orange',));
+            wp_insert_term('Brown', 'color', array('slug' => 'brown',));
+            wp_insert_term('Moccasin', 'color', array('slug' => 'moccasin',));
+        }
+
         
         update_option("pinc_version", "2.1");
         add_action("admin_notices", "pinc_admin_notices");

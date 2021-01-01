@@ -65,6 +65,14 @@
 #masonry .masonry-actionbar {
     right: -5px;
 }
+.pricewrapper {
+    right: -1px;
+    left: inherit;
+}
+#masonry .masonry-meta-comment {
+    margin-left: 39px;
+    margin-right: inherit;
+}
 /* repost */
 #post-repin-box .close {
     margin: 4px 8px 0 0;
@@ -96,4 +104,38 @@
 }
 .board-mini h4 {
     text-align: left;
+}
+.post-wrapper .post-author-wrapper-header {
+    margin-left: 60px;
+    margin-right: inherit;
+}
+.post-comments .comment-avatar {
+    float: left;
+    padding: 3px 10px 0 0;
+}
+#commentform .textarea-wrapper {
+    margin-left: 60px;
+    margin-right: inherit;
+}
+.post-wrapper #commentform #submit {
+    float: right;
+}
+#masonry .masonry-meta input[type="submit"], .post-comments #submit {
+    margin: 10px 0 10px 60px;
+}
+.post-wrapper .post-board-photo {
+    float: left;
+    margin: 0 5.5px 5.5px 0;
+}
+.board-mini .board-photo-wrapper {
+    float: left;
+    margin: 5px 6px 0 0;
+}
+.board-mini .board-photo-wrapper:nth-child(5) {
+    margin-right: 0;
+    margin-left: inherit;
+}
+#post-close {
+    right: 65px;
+    left: inherit;
 }
