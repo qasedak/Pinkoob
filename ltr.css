@@ -2,6 +2,7 @@
 * {
     font-family: 'Open Sans', sans-serif;
 }
+/* top bar styles */
 #topmenu-icons-wrapper {
     padding-left: 15px;
     padding-right: 0;
@@ -14,4 +15,45 @@
 #topmenu .dropdown-menu .dropdown-menu {
     left: 100%;
     right: 0;
+}
+@media (min-width: 768px){
+    .navbar-header {
+        float: left;
+    }
+}
+@media (min-width: 768px){
+    .navbar-nav {
+        float: left;
+    }
+}
+.dropdown-menu {
+    text-align: left;
+}
+@media (min-width: 768px){
+    .navbar-nav > li {
+        float: left;
+    }
+}
+.close {
+    float: right;
+}
+@media (min-width: 768px){
+    .navbar-right .dropdown-menu {
+        left: auto;
+        right: 0;
+    }
+}
+/* photo of the day */
+.search-main-form input {
+    border-left: inherit;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.search-main-form button {
+    border-right: inherit;
+    border-left: 0 !important;
+    border-radius: 0 3px 3px 0;
+}
+.left-flo {
+    float: right;
 }
