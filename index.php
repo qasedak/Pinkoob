@@ -46,7 +46,6 @@ echo'
 		</div>
 	</div>';
 }
-
 echo '				</div>
 	            </div>
 	        </div>
