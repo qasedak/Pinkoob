@@ -1,7 +1,4 @@
 /* LTR Support since v1.5.4 RC */
-* {
-    font-family: 'Open Sans', sans-serif;
-}
 /* top bar styles */
 #topmenu-icons-wrapper {
     padding-left: 15px;
@@ -56,4 +53,44 @@
 }
 .left-flo {
     float: right;
+}
+/* Post loop */
+#masonry .masonry-meta-avatar {
+    float: left;
+    margin: 2px 2px 5px 0;
+}
+#masonry .masonry-actionbar {
+    text-align: left;
+}
+#masonry .masonry-actionbar {
+    right: -5px;
+}
+/* repost */
+#post-repin-box .close {
+    margin: 4px 8px 0 0;
+}
+.input-group-addon:first-child {
+    border-left: 1px solid #ccc;
+    border-right: 0;
+}
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.usercp-pins #pin-upload-postdata-wrapper form select {
+    float: left;
+}
+/* pin view */
+@media (min-width: 768px){
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        float: left;
+    }
 }

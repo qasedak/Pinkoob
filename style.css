@@ -272,7 +272,7 @@ padding: 12px 10px 12px 10px;
 }
 
 #menu-top-right #dropdown-user-settings .avatar {
-border: 1px solid #aaa;
+    border: 2px solid var(--accent-color-one);
 }
 
 #menu-top-right #dropdown-user-settings .dropdown-menu .fa {
