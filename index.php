@@ -32,14 +32,22 @@ if(of_get_option('daily_photo_feature') == 'on') {
 								</div>
 								<button class="btn btn-sm" type="submit"><i class="fas fa-search"></i></button>
 							</form>
-	                    </div>
-	                <div class="tags-main">
-	                    <div class="tags-detail">
-							<span>'. __('Common tags','pinc') .': </span>';  wpb_tag_cloud();
-							echo '
-	                    </div>
-	                </div>
-	                </div>
+	                    </div>';
+if (of_get_option('posttags') == 'enable') {
+    echo '
+	<div class="tags-main">
+		<div class="tags-detail">
+			<span>'. __('Common tags', 'pinc') .': ';
+}
+if (of_get_option('posttags') == 'enable') {
+wpb_tag_cloud();
+echo'
+			</span>
+		</div>
+	</div>';
+}
+
+echo '				</div>
 	            </div>
 	        </div>
 	        <div class="down-links">
