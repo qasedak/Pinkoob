@@ -684,7 +684,7 @@ clear: both;
 color: #888;
 font-size: 0.9em;
 line-height: 1.3em;
-padding: 10px 10px 12px 14px;
+padding: 5px 10px 6px 14px;
 }
 
 #masonry .masonry-meta-author, #masonry .masonry-meta-content {
@@ -727,13 +727,17 @@ margin-right: 39px;
 white-space: pre-wrap;
 }
 
+.masonry-meta-avatar {
+	margin-right: 9px !important;
+}
+
 #masonry .masonry-meta-avatar {
 float: right;
 margin: 2px 0px 5px 2px;
 }
 
 #masonry .masonry-meta-avatar img {
-border-radius: 50%;
+border-radius: 10%;
 }
 
 #masonry #reply-title {
@@ -1975,7 +1979,7 @@ background: #fbfbfb;
 
 /* Misc */
 .avatar {
-border-radius: 50%;
+border-radius: 10%;
 }
 
 .bigmsg {
