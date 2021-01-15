@@ -42,6 +42,11 @@ Tags: photo, gallery, portfolio, social, network
     outline: none;
 }
 
+::selection {
+	color: #fff;
+	background: var(--accent-color-one);
+}
+
 body {
 background: #f2f2f2;
 padding-bottom: 15px;
