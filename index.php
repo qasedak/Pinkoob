@@ -8,8 +8,7 @@ if (is_home()) {
 }
 
 get_header(); global $user_ID;
-?>
-<?php
+
 if(of_get_option('daily_photo_feature') == 'on') {
 	/* Photo of the Day Post ID */
 	$id = of_get_option('mainpage_daily_photo');
