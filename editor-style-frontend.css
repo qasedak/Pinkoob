@@ -18,9 +18,3 @@ color: #3f3f3f;
 text-decoration: none;
 transition: color .2s ease-in;
 }
-
-blockquote {
-border-left: 5px solid #eeeeee;
-padding: 0 10px;
-margin-left: 15px;
-}

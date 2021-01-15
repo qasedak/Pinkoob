@@ -963,7 +963,7 @@ if( !function_exists("pinc_wp_editor") )
 {
 function pinc_wp_editor($editor_id, $post_content = "")
 {
-    $settings = array( "textarea_rows" => 2, "media_buttons" => false, "quicktags" => false, "tinymce" => array( "toolbar1" => "bold, italic, blockquote, bullist, numlist, link, unlink", "toolbar2" => "", "plugins" => "wplink", "content_css" => get_stylesheet_directory_uri() . "/editor-style-frontend.css" ) );
+    $settings = array( "textarea_rows" => 2, "media_buttons" => false, "quicktags" => true, "tinymce" => array( "toolbar1" => "bold, italic", "toolbar2" => "", "plugins" => "wplink", "content_css" => get_stylesheet_directory_uri() . "/editor-style-frontend.css" ) );
     ob_start();
     wp_editor($post_content, $editor_id, $settings);
     $editor_contents = ob_get_clean();

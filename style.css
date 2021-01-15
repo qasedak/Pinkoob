@@ -2496,6 +2496,9 @@ width: 100% !important;
 display: none !important;
 }
 
+.wp-editor-container textarea.wp-editor-area {
+    color: black !important;
+}
 
 /* User Control Panel */
 .usercp-wrapper {
