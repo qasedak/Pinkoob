@@ -38,13 +38,13 @@ function wpb_tag_cloud() {
     /* use post id to change the image of the day */
     if ( function_exists( 'add_theme_support' ) ) {
         add_theme_support( 'post-thumbnails' );
-        add_image_size( 'daily-thumbs', 2000, 1024 );
+        add_image_size( 'daily-thumbs', 2000 );
         //download size options
         add_image_size( 'small-size-dl', 640 );
         add_image_size( 'medium-size-dl', 1920 );
         add_image_size( 'large-size-dl', 2400 );
     }
-    function dailyImage($id) { 
+    function dailyImage($id = 0) {
         if($id == "rnd"){
     
             $argss = array( 
@@ -3996,6 +3996,9 @@ function pinc_setup()
         $page = array( "post_title" => __('Top Users','pinc'), "post_name" => "top-users", "post_author" => 1, "post_status" => "publish", "post_type" => "page", "comment_status" => "closed", "ping_status" => "closed" );
         $pageid = wp_insert_post($page);
         add_post_meta($pageid, "_wp_page_template", "page_top_users.php");
+        $page = array( "post_title" => __('API/Developers','pinc'), "post_name" => "api", "post_author" => 1, "post_status" => "publish", "post_type" => "page", "comment_status" => "closed", "ping_status" => "closed" );
+        $pageid = wp_insert_post($page);
+        add_post_meta($pageid, "_wp_page_template", "api.php");
         $menuname = "Top Menu";
         $menulocation = "top_nav";
         $menu_exists = wp_get_nav_menu_object($menuname);
@@ -4059,18 +4062,29 @@ function pinc_setup()
         }
 
         
-        update_option("pinc_version", "2.1");
+        update_option("pinc_version", "1.6");
         add_action("admin_notices", "pinc_admin_notices");
     }
     else
     {
-        if( floatval($pinc_version) <= 2 ) 
+        if( floatval($pinc_version) <= 1.5 ) 
         {
-            update_option("pinc_version", "2.1");
+            update_option("pinc_version", "1.6");
         }
 
     }
 
+}
+// Upgrade theme 
+$pinc_version = get_option("pinc_version");
+if( floatval($pinc_version) <= 1.6 ){
+    $sql = "CREATE TABLE IF NOT EXISTS `" . $wpdb->prefix . "pinc_notifications` (\n\t\t\t`notification_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,\n\t\t\t`user_id` bigint(20) unsigned NOT NULL DEFAULT '0',\n\t\t\t`notification_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',\n\t\t\t`notification_type` varchar(255) NOT NULL,\n\t\t\t`notification_from` bigint(20) unsigned NOT NULL DEFAULT '0',\n\t\t\t`notification_post_id` bigint(20) unsigned NOT NULL DEFAULT '0',\n\t\t\t`notification_message` longtext NOT NULL,\n\t\t\t`notification_read` tinyint(1) unsigned NOT NULL DEFAULT '0',\n\t\t\tPRIMARY KEY (`notification_id`),\n\t\t\tKEY user_id (`user_id`)\n\t\t) CHARACTER SET utf8 COLLATE utf8_general_ci;";
+    require_once(ABSPATH . "wp-admin/includes/upgrade.php");
+    dbDelta($sql);
+    $page = array( "post_title" => __('API/Developers','pinc'), "post_name" => "api", "post_author" => 1, "post_status" => "publish", "post_type" => "page", "comment_status" => "closed", "ping_status" => "closed" );
+    $pageid = wp_insert_post($page);
+    add_post_meta($pageid, "_wp_page_template", "api.php");
+    update_option("pinc_version", "1.7");
 }
 
 function pinc_admin_notices()
