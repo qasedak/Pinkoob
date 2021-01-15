@@ -44,6 +44,11 @@ if (isset($_GET["pin"]) && !empty($_GET) && is_user_logged_in()) {
     <div calss="container-fluid">
         <h3>The most powerful photo engine in the world.</h3>
         <p>Welcome to the Official Pinkoob API. Create with the largest open collection of high-quality photos. For free.</p>
+        <h4>Try it</h4>
+        <a href="<?php echo home_url( '/api/?pin=rnd&size=small' ); ?>"><?php echo home_url( '/api/?pin=rnd&size=small' ); ?></a>
+        <p>in the exapmle above "pin" is the post ID and "size" can be "small", "medium", "large" and "raw".<br>
+        "size" is optinal and its default value is "raw" if it's not set.
+        </p>
     <?php if (!is_user_logged_in()){ ?>
         <span class="alert alert-info">You need to login or create Account to use API!</span>
     </div>
