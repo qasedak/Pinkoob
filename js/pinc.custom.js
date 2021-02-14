@@ -28,9 +28,9 @@ jQuery(document).ready(function($) {
 	if (obj_pinc.infinitescroll != 'disable' && ($masonry.length || user_profile_follow.length || user_profile_boards.length ||  user_notifications.length)) {
 		$('#navigation').css({'visibility':'hidden', 'height':'1px'});
 	}
-
+	var $body = $(document.body);
 	if ($masonry.length) {
-		if ($('.check-480px').css('float') == 'left') {
+		if ($('.check-480px').css('float') == 'left' && $body.css('direction') == 'rtl') {
 			$masonry.imagesLoaded(function() {
 				$masonry.masonry({
 					itemSelector : '.thumb',
@@ -39,6 +39,19 @@ jQuery(document).ready(function($) {
 					transitionDuration: 0
 				}).css('visibility', 'visible');
 
+				if ($('#masonry .thumb').length == 1) {
+					$('#masonry .thumb').css('width', '95%');
+				}
+
+				$('#ajax-loader-masonry').hide();
+			});
+		} else if($('.check-480px').css('float') == 'left' && $body.css('direction') == 'ltr') {
+			$masonry.imagesLoaded(function() {
+				$masonry.masonry({
+					itemSelector : '.thumb',
+					fitWidth: true,
+					transitionDuration: 0
+				}).css('visibility', 'visible');
 				if ($('#masonry .thumb').length == 1) {
 					$('#masonry .thumb').css('width', '95%');
 				}
@@ -828,7 +841,12 @@ jQuery(document).ready(function($) {
 				success: function(response) {
 					var comment_response = JSON.parse(response);
 					var commenttext =  $('#commentform #comment').val();
-					var comment_actions = '<div class="pull-left">' + comment_response.reply_link + '&nbsp;' + comment_response.edit_link + '</div>';
+					var $body = $(document.body);
+					if ($body.css('direction') == 'ltr') {
+						var comment_actions = '<div class="pull-right">' + comment_response.reply_link + '&nbsp;' + comment_response.edit_link + '</div>';
+					} else {
+						var comment_actions = '<div class="pull-left">' + comment_response.reply_link + '&nbsp;' + comment_response.edit_link + '</div>';
+					}
 					var newcomment = '<li class="comment" id="comment-' + comment_response.comment_ID + '"><div class="comment-avatar">' + obj_pinc.avatar48 + '</div>' + comment_actions + '<div class="comment-content"><strong><span class="comment"><a href="' + obj_pinc.home_url + '/' + obj_pinc.user_rewrite + '/' + obj_pinc.ul + '/">' + obj_pinc.ui + '</a></span></strong> <span class="text-muted">&#8226; ' + obj_pinc.__postcommenttimenow + '</span><p>' + commenttext.replace(/(?:\r\n|\r|\n)/g, '<br />') + '</p></div></li>';
 
 					$('.comment-status-ajax-loader').remove();
@@ -856,8 +874,11 @@ jQuery(document).ready(function($) {
 					} else {
 						$('#comments-count-'+post_id).html('<i class="fas fa-comment"></i> ' + (parseInt(comments_count,10)+1));
 					}
-
-					comment_actions = '<div class="pull-left">' + comment_response.edit_link + '</div>';
+					if ($body.css('direction') == 'ltr') {
+						comment_actions = '<div class="pull-right">' + comment_response.edit_link + '</div>';
+					} else {
+						comment_actions = '<div class="pull-left">' + comment_response.edit_link + '</div>';
+					}
 
 					var newcomment_masonry = '<div id="masonry-meta-comment-wrapper-' + post_id + '" class="masonry-meta"><div class="masonry-meta-avatar">' + obj_pinc.avatar30 + '</div><div class="masonry-meta-comment" id="masonry-comment-' + comment_response.comment_ID + '">' + comment_actions + '<span class="masonry-meta-author">' + obj_pinc.ui + '</span><span class="masonry-meta-comment-content"> ' + commenttext + '</span></div></div>';
 					$('[id=masonry-meta-commentform-' + post_id + ']').prev().append(newcomment_masonry);
@@ -1328,7 +1349,13 @@ jQuery(document).ready(function($) {
 			},
 			success: function(response) {
 				var comment_response = JSON.parse(response);
-				var	comment_actions = '<div class="pull-left">' + comment_response.edit_link + '</div>';
+				var $body = $(document.body);
+				if ($body.css('direction') == 'ltr') {
+					var	comment_actions = '<div class="pull-right">' + comment_response.edit_link + '</div>';
+				} else {
+					var	comment_actions = '<div class="pull-left">' + comment_response.edit_link + '</div>';
+				}
+				
 				commentform.find('.form-submit .comment-status-ajax-loader').remove();
 				var commenttext =  commentform.find('textarea').val();
 				var newcomment = '<div id="masonry-meta-comment-wrapper-' + post_id + '" class="masonry-meta"><div class="masonry-meta-avatar">' + obj_pinc.avatar30 + '</div><div class="masonry-meta-comment" id="masonry-comment-' + comment_response.comment_ID + '">' + comment_actions + '<span class="masonry-meta-author">' + obj_pinc.ui + '</span><span class="masonry-meta-comment-content"> ' + commenttext + '</span></div></div>';
@@ -1412,7 +1439,17 @@ jQuery(document).ready(function($) {
 				.modal().load(href + ' #single-pin-wrapper', function() {
 
 					var post_masonry = $('#post-masonry #masonry');
-					if (post_masonry.length) {
+
+					var $body = $(document.body);
+					
+					if (post_masonry.length && $body.css('direction') == 'ltr') {
+						post_masonry.masonry({
+							itemSelector : '.thumb',
+							fitWidth: true,
+							transitionDuration: 0
+						}).css('visibility', 'visible');
+						$('#post-masonry #ajax-loader-masonry, #post-masonry #navigation').hide();
+					} else if (post_masonry.length) {
 						post_masonry.masonry({
 							itemSelector : '.thumb',
 							fitWidth: true,
