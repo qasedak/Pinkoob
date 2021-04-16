@@ -26,7 +26,7 @@ if(of_get_option('daily_photo_feature') == 'on') {
 	                    <div class="saerch-main">
 							<form class="navbar-form search-main-form" method="get" id="searchform" action="'. esc_url( $hUrl ) .'">
 								<div style="width: 100%;">
-									<input id="s" class="form-control input-sm search-query" style="text-indent: 10px; font-size:14px; background-color: #fff" placeholder="'. __('Search free high-resolution photos','pinc') .'" name="s" value="" type="search">
+									<input id="s" class="form-control input-sm search-query search-main-input" placeholder="'. __('Search free high-resolution photos','pinc') .'" name="s" value="" type="search">
 									<input name="q" value="" type="hidden">
 								</div>
 								<button class="btn btn-sm" type="submit"><i class="fas fa-search"></i></button>

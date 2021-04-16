@@ -853,3 +853,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .usercp-pins #pin-upload-postdata-wrapper .postdata-box-photo .select-thumb-message {
 	background: #0c3c42;
   }
+
+input[type = search], input[type = text] ,textarea, select {
+    background-color: #333 !important;
+    color: #999 !important;
+}
+input[type = search]:focus, input[type = text]:focus ,textarea:focus , select:focus {
+    background-color: #fff !important;
+}

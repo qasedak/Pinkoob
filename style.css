@@ -3730,3 +3730,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .usercp-wrapper #register_agree_msg {
     margin: -3px 32px 0 0;
 }
+
+.search-main-input {
+    text-indent: 10px;
+    font-size:14px;
+    background-color: #fff;
+}
+
+.pinc-delete-pin {
+    margin: 10px 0 0 0;
+}
