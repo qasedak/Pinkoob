@@ -221,6 +221,14 @@ float: left;
 width: 50%;
 }
 
+.top-search{
+    width: 100%;
+}
+
+.form-control.input-sm.search-query {
+    border-radius: 20px 0 0 20px;
+}
+
 #topmenu #dropdown-search {
 padding-bottom: 5px;
 padding-top: 5px;
@@ -294,7 +302,7 @@ background: #ccc;
 border-radius: 4px;
 color: #fff;
 font-weight: bold;
-padding: 5px 8px;
+padding: 2px 8px;
 }
 
 #menu-top-right #user-notifications-count a.user-notifications-count-nth span {

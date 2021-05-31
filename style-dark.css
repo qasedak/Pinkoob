@@ -15,6 +15,25 @@ hr {
 border-color: #4f4f4f;	
 }
 
+.search-main-form button {
+    background-color: #333;
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+    color: #fafafa;
+}
+
+.tags-detail a {
+    color: #ccc !important;
+}
+
+.tags-detail a:hover {
+    color: #fafafa !important;
+}
+
+.bootstrap-tagsinput {
+    background-color: #333;
+}
 
 /* Top Menu */
 .navbar-inverse {
