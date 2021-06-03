@@ -101,7 +101,7 @@
 						<a id="icon-add-pin" rel="tooltip" data-placement="bottom" title="<?php _e('Add Pin', 'pinc'); ?>" href="<?php echo home_url('/itm-settings/'); ?>">
 							<span class="fa-stack">
 							<i class="fas fa-file fa-stack-2x" style="font-size: 18px; top: 3px;"></i>
-								<i class="fas fa-plus fa-stack-1x fa-inverse" style="font-size: 11px; color: #222; top: 3px;"></i>
+								<i class="fas fa-plus fa-stack-1x fa-inverse" style="font-size: 11px; top: 3px;"></i>
 							</span>
 						</a>
 					</li>
@@ -148,13 +148,13 @@
 				?>
 
 				<?php if ( is_home() == false || of_get_option('daily_photo_feature') == 'off' ) { ?>
-					<ul class="nav navbar-nav top-search">
-						<form class="navbar-form" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
-							<input id="s" class="form-control input-sm search-query" type="search" placeholder="<?php _e('Search', 'pinc'); ?>" name="s" value="<?php the_search_query(); ?>">
+					<div class="nav navbar-nav top-search">
+						<form class="navbar-form top-search-from" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
+							<input id="s" class="form-control input-sm search-query top-search-input" type="search" placeholder="<?php _e('Search', 'pinc'); ?>" name="s" value="<?php the_search_query(); ?>">
 							<input type="hidden" name="q" value="<?php echo $_GET['q']; ?>"/>
-							<button class="btn btn-success btn-sm" type="submit"><i class="fas fa-search"></i></button>
+							<button class="btn btn-sm top-search-btn" type="submit"><i class="fas fa-search"></i></button>
 						</form>
-					</ul>
+					</div>
 				<?php }?>
 
 				<ul id="topmenu-icons-wrapper" class="nav navbar-nav">

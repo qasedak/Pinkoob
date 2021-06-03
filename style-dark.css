@@ -20,7 +20,7 @@ border-color: #4f4f4f;
 }
 
 .btn:hover, .btn:focus, .btn.focus {
-    color: #fafafa;
+    color: #fafafa !important;
 }
 
 .tags-detail a {
@@ -879,4 +879,12 @@ input[type = search], input[type = text] ,textarea, select {
 }
 input[type = search]:focus, input[type = text]:focus ,textarea:focus , select:focus {
     background-color: #fff !important;
+}
+
+.fas.fa-plus.fa-stack-1x.fa-inverse {
+	color: #222;
+}
+
+.top-search-btn {
+	background-color: #333 !important;
 }
