@@ -23,16 +23,24 @@
 			$is_gallery = count($images) > 1;
 
 			$imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
-			if ($imgsrc[0] == '') {
-				$imgsrc[0] = get_template_directory_uri() . '/img/blank.gif';
-				$imgsrc[1] = get_option('medium_size_w');
-				$imgsrc[2] = get_option('medium_size_w');
-			} else if ($imgsrc[1] <= 1 && $imgsrc[2] <= 1){
+			if ($photo_source == ''){
+				if ($imgsrc[0] == '') {
+					$imgsrc[0] = get_template_directory_uri() . '/img/blank.gif';
+					$imgsrc[1] = get_option('medium_size_w');
+					$imgsrc[2] = get_option('medium_size_w');
+				} else if ($imgsrc[1] <= 1 && $imgsrc[2] <= 1){
+					$thumbid = get_post_thumbnail_id($post->ID);
+					$size = getimagesize($imgsrc[0]);
+					$imgsrc[1] = $size[0];
+					$imgsrc[2] = $size[1];
+				}
+			} else {
 				$thumbid = get_post_thumbnail_id($post->ID);
-				$size = getimagesize($imgsrc[0]);
-				$imgsrc[1] = $size[0];
-				$imgsrc[2] = $size[1];
+				$extImg = get_attached_media('image', $pin_id);
+				reset($extImg);
+				$imgsrc = [$extImg[key($extImg)]->guid,get_option('medium_size_w'),round(get_option('medium_size_w')/1.77),1];
 			}
+
 
 			//if is animated gif
 			$animated_gif = false;

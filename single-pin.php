@@ -338,9 +338,9 @@
 										<a class="pull-left" href="<?php echo $board_link; ?>">
 										<?php
 										$post_array = array();
-										foreach ($board_thumbnail_ids as $board_thumbnail_id => $board_post_id) {
+										foreach ($board_thumbnail_ids as $board_thumbnail_id) {
 											$videos = get_attached_media('video', $board_post_id);
-											$board_imgsrc = wp_get_attachment_image_src($board_thumbnail_id, 'thumbnail');
+											$board_imgsrc = wp_get_attachment_image_src($board_thumbnail_id-1, 'thumbnail');
 											$board_imgsrc = $board_imgsrc[0];
 											$data = [
 												'type' => empty($videos) ? 'image' : 'video',

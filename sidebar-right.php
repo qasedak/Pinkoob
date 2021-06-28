@@ -46,15 +46,14 @@
 					<?php
 					$count= 1;
 					$post_array = array();
-					foreach ($board_thumbnail_ids as $board_thumbnail_id => $board_post_id) {
+					foreach ($board_thumbnail_ids as $board_thumbnail_id) {
 						$videos = get_attached_media('video', $board_post_id);
 						if ($count == 1) {
-							$imgsrc = wp_get_attachment_image_src($board_thumbnail_id, 'board-main-image');
+							$imgsrc = wp_get_attachment_image_src($board_thumbnail_id-1, 'board-main-image');
 						} else {
-							$imgsrc = wp_get_attachment_image_src($board_thumbnail_id, 'thumbnail');
+							$imgsrc = wp_get_attachment_image_src($board_thumbnail_id-1, 'thumbnail');
 						}
 						$imgsrc = $imgsrc[0];
-
 						$data = [
 							'type' => empty($videos) ? 'image' : 'video',
 							'src' => $imgsrc
